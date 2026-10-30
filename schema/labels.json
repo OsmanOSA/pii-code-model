@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "mirrors": "agent-privacy-guard: benchmark/annotation.py (categories), benchmark/scoring.py (kind to category), core/category_policy.py (treatment)",
+  "tagging": {
+    "scheme": "BIOES",
+    "outside": "O",
+    "label_count": 33
+  },
+  "categories": [
+    {"name": "name", "treatment": "pseudonymize", "covers": "given name, family name or full name of a person"},
+    {"name": "email", "treatment": "pseudonymize", "covers": "any email address, generic mailboxes included"},
+    {"name": "phone", "treatment": "pseudonymize", "covers": "landline or mobile number, national or international"},
+    {"name": "address", "treatment": "pseudonymize", "covers": "street line with number and street, then postcode and city when they follow"},
+    {"name": "birth_date", "treatment": "pseudonymize", "covers": "a date the context marks as a date of birth"},
+    {"name": "identifier", "treatment": "pseudonymize", "covers": "national identity and administrative numbers"},
+    {"name": "banking", "treatment": "pseudonymize, card security code redacted", "covers": "IBAN of any country, card number, card security code, bank account number"},
+    {"name": "secret", "treatment": "redact", "covers": "API keys, tokens, passwords, private keys, the password inside a URL"}
+  ],
+  "entity_kinds": {
+    "person_name": {"category": "name", "product_kind": true, "variants": ["given", "family", "initial", "handle"]},
+
+    "email": {"category": "email", "product_kind": true, "variants": ["generic"]},
+
+    "phone": {"category": "phone", "product_kind": true},
+
+    "fr_postal_address": {"category": "address", "product_kind": true, "variants": ["street", "multiline"]},
+    "postal_address": {"category": "address", "product_kind": true, "variants": ["street", "multiline"]},
+
+    "birth_date": {"category": "birth_date", "product_kind": true},
+
+    "fr_social_security_number": {"category": "identifier", "product_kind": true},
+    "fr_tax_number": {"category": "identifier", "product_kind": true},
+    "fr_identity_card": {"category": "identifier", "product_kind": true},
+    "fr_passport": {"category": "identifier", "product_kind": true},
+    "fr_driving_licence": {"category": "identifier", "product_kind": true},
+    "fr_license_plate": {"category": "identifier", "product_kind": true},
+    "fr_siren": {"category": "identifier", "product_kind": true},
+    "fr_siret": {"category": "identifier", "product_kind": true},
+    "us_ssn": {"category": "identifier", "product_kind": false},
+    "us_itin": {"category": "identifier", "product_kind": false},
+    "us_passport": {"category": "identifier", "product_kind": false},
+    "us_driver_license": {"category": "identifier", "product_kind": false},
+    "us_license_plate": {"category": "identifier", "product_kind": false},
+    "uk_national_insurance_number": {"category": "identifier", "product_kind": false},
+    "uk_passport": {"category": "identifier", "product_kind": false},
+    "uk_driving_licence": {"category": "identifier", "product_kind": false},
+    "uk_license_plate": {"category": "identifier", "product_kind": false},
+
+    "iban": {"category": "banking", "product_kind": true},
+    "payment_card": {"category": "banking", "product_kind": true},
+    "card_security_code": {"category": "banking", "product_kind": true},
+    "bank_account_number": {"category": "banking", "product_kind": false},
+
+    "private_key": {"category": "secret", "product_kind": true},
+    "url_password": {"category": "secret", "product_kind": true},
+    "stripe_secret_key": {"category": "secret", "product_kind": true},
+    "anthropic_api_key": {"category": "secret", "product_kind": true},
+    "openai_api_key": {"category": "secret", "product_kind": true},
+    "aws_access_key_id": {"category": "secret", "product_kind": true},
+    "github_token": {"category": "secret", "product_kind": true},
+    "jwt": {"category": "secret", "product_kind": true},
+    "password": {"category": "secret", "product_kind": false},
+    "opaque_token": {"category": "secret", "product_kind": false},
+    "aws_secret_access_key": {"category": "secret", "product_kind": false},
+    "slack_token": {"category": "secret", "product_kind": false},
+    "google_api_key": {"category": "secret", "product_kind": false},
+    "gitlab_token": {"category": "secret", "product_kind": false},
+    "huggingface_token": {"category": "secret", "product_kind": false},
+    "npm_token": {"category": "secret", "product_kind": false},
+    "sendgrid_api_key": {"category": "secret", "product_kind": false}
+  },
+  "visible_kinds": [
+    "city", "postcode", "country", "company", "job_title", "date", "age",
+    "uuid", "hash", "git_sha", "order_number", "invoice_number", "customer_id", "ticket_id",
+    "version", "ip_address", "hostname", "url", "file_path", "username",
+    "bic", "stripe_publishable_key", "ssh_public_key"
+  ],
+  "trap_types": {
+    "word_name": "a given name used as an ordinary word or a place (Pierre the stone, Rose the colour, Paris the city)",
+    "eponym": "a person's name used for a thing: algorithm, law, unit, theorem (Dijkstra, Gauss, Levenshtein)",
+    "library": "a library, framework or tool that carries a name (Jackson, Flask, Pandas, Sphinx, Jinja)",
+    "code_identifier": "a variable, function, class or module name that contains a name (get_dupont_score, class Martin)",
+    "company_name": "a company named after a family name (Peugeot, Dupont Plomberie)",
+    "initials": "initials alone (JD, J.-P.)",
+    "email_lookalike": "text shaped like an email that is not one (@app.route, @types/node, $USER@host)",
+    "indicator_non_pii": "a word that usually announces personal data or a secret, followed by a value that is not one (user=admin, TOKEN_TTL=3600, Bonjour à tous)",
+    "placeholder": "a stand-in where a secret would go (${DB_PASSWORD}, <password>, xxxx, ***, %(password)s)"
+  }
+}

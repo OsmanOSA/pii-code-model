@@ -1,0 +1,1374 @@
+# Drawn by `python -m datagen briefs`. Do not edit by hand: delete the file to draw again.
+- slot: 1
+  format: informal email
+  domain: networking
+  situation: a meetup organiser looks for a host for the next event
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: the writer keeps the details for a private message
+  position: none
+  indicator: absent
+  length: medium
+  lines: &id003
+  - 7
+  - 15
+- slot: 2
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: recruiting
+  situation: a candidate moves a call because of childcare
+  kinds:
+  - phone
+  - person_name
+  - email
+  full_record: false
+  data_role: accessory
+  reason: so the reader can reach them or someone else
+  position: middle of a sentence
+  indicator: absent
+  length: short
+  lines: &id002
+  - 3
+  - 6
+- slot: 3
+  format: LinkedIn message
+  domain: freelance missions
+  situation: a language teacher proposes a new schedule for online lessons
+  kinds:
+  - phone
+  - email
+  full_record: false
+  data_role: accessory
+  reason: signature added out of habit
+  position: signature
+  indicator: absent
+  length: very short
+  lines: &id001
+  - 1
+  - 2
+- slot: 4
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: personal life
+  situation: a friend asks to borrow a car for the weekend
+  kinds:
+  - fr_license_plate
+  full_record: false
+  data_role: central
+  reason: identifies a car in a small everyday problem
+  position: last line before the sign-off
+  indicator: present
+  length: very short
+  lines: *id001
+- slot: 5
+  format: LinkedIn message
+  domain: sales prospecting
+  situation: a salesperson proposes lunch to a local business owner
+  kinds:
+  - email
+  full_record: false
+  data_role: accessory
+  reason: signature added out of habit
+  position: signature
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 6
+  format: forum post
+  domain: community
+  situation: a sports club member looks for a carpool to a match
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: the writer keeps the details for a private message
+  position: none
+  indicator: present
+  length: long
+  lines: &id004
+  - 16
+  - 40
+- slot: 7
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: community
+  situation: a volunteer asks for drivers for a food collection
+  kinds:
+  - person_name
+  - iban
+  - phone
+  - fr_postal_address
+  - birth_date
+  full_record: true
+  data_role: central
+  reason: sends everything an office or an employer asked for
+  position: opening sentence
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 8
+  format: informal email
+  domain: customer support
+  situation: a customer asks a garage when the car will be ready
+  kinds:
+  - person_name
+  - email
+  - fr_license_plate
+  full_record: false
+  data_role: accessory
+  reason: quoted from an earlier message
+  position: a quoted earlier message
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 9
+  format: informal email
+  domain: personal life
+  situation: a friend organises a birthday surprise
+  kinds:
+  - fr_postal_address
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: practical detail for a meeting, a delivery or a visit
+  position: after the main point, as an afterthought
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 10
+  format: informal email
+  domain: sales prospecting
+  situation: a prospect sends what is needed to open an account
+  kinds:
+  - person_name
+  - fr_passport
+  - birth_date
+  - fr_postal_address
+  - iban
+  full_record: true
+  data_role: central
+  reason: forwards a person's details to a colleague or a relative
+  position: P.S.
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 11
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: recruiting
+  situation: a graduate asks a stranger how they got into data engineering
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a person is named in passing while the message is about something else
+  position: middle of a sentence
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 12
+  format: informal email
+  domain: customer support
+  situation: a traveller asks for a refund after a cancelled train
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a word like contact, mail or number appears with no value after it
+  position: none
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 13
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: community
+  situation: parents organise a carpool to school
+  kinds:
+  - fr_postal_address
+  - fr_license_plate
+  full_record: false
+  data_role: accessory
+  reason: pasted with something else by mistake
+  position: after the main point, as an afterthought
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 14
+  format: informal email
+  domain: freelance missions
+  situation: a sound engineer asks for the venue's technical sheet
+  kinds:
+  - fr_postal_address
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: practical detail for a meeting, a delivery or a visit
+  position: a short list of practical details
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 15
+  format: LinkedIn message
+  domain: networking
+  situation: a former intern asks for a letter of recommendation
+  kinds:
+  - email
+  full_record: false
+  data_role: central
+  reason: so the reader can reach them or someone else
+  position: last line before the sign-off
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 16
+  format: SMS
+  domain: sales prospecting
+  situation: a prospect asks for a longer trial
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a person is named in passing while the message is about something else
+  position: last line before the sign-off
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 17
+  format: LinkedIn message
+  domain: sales prospecting
+  situation: a supplier asks a restaurant owner to try samples
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: only a city, an age or an ordinary date appears
+  position: none
+  indicator: present
+  length: long
+  lines: *id004
+- slot: 18
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: networking
+  situation: a group member suggests a lunch for local founders
+  kinds:
+  - fr_postal_address
+  - phone
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: practical detail for a meeting, a delivery or a visit
+  position: a short list of practical details
+  indicator: present
+  length: very short
+  lines: *id001
+- slot: 19
+  format: informal email
+  domain: customer support
+  situation: a customer wants to return a gift without a receipt
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: the writer keeps the details for a private message
+  position: none
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 20
+  format: informal email
+  domain: recruiting
+  situation: a candidate negotiates remote days before signing
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a person is named in passing while the message is about something else
+  position: last line before the sign-off
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 21
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: freelance missions
+  situation: an illustrator negotiates usage rights for a poster
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: the writer keeps the details for a private message
+  position: none
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 22
+  format: informal email
+  domain: community
+  situation: a choir member announces a rehearsal change
+  kinds:
+  - fr_postal_address
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: practical detail for a meeting, a delivery or a visit
+  position: opening sentence
+  indicator: present
+  length: very short
+  lines: *id001
+- slot: 23
+  format: social media comment
+  domain: personal life
+  situation: a friend congratulates a couple on their engagement
+  kinds:
+  - phone
+  full_record: false
+  data_role: central
+  reason: passes on a third person's contact
+  position: last line before the sign-off
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 24
+  format: informal email
+  domain: freelance missions
+  situation: a client asks a freelancer to sign a confidentiality agreement
+  kinds:
+  - person_name
+  - fr_postal_address
+  - iban
+  - fr_driving_licence
+  full_record: true
+  data_role: central
+  reason: forwards a person's details to a colleague or a relative
+  position: P.S.
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 25
+  format: SMS
+  domain: recruiting
+  situation: an intern asks a former tutor for a reference
+  kinds:
+  - person_name
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: passes on a third person's contact
+  position: middle of a sentence
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 26
+  format: informal email
+  domain: networking
+  situation: a contact sends new year wishes and proposes catching up
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a company, brand or tool carrying a family name is mentioned
+  position: none
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 27
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: customer support
+  situation: a support agent asks to confirm a detail before making a change
+  kinds:
+  - person_name
+  - birth_date
+  - fr_postal_address
+  - iban
+  full_record: true
+  data_role: central
+  reason: gives someone what they need to act on the writer's behalf
+  position: last line before the sign-off
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 28
+  format: LinkedIn message
+  domain: sales prospecting
+  situation: a reseller proposes a bundle to a small shop
+  kinds:
+  - email
+  - person_name
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: pasted with something else by mistake
+  position: a short list of practical details
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 29
+  format: informal email
+  domain: freelance missions
+  situation: a client changes the scope in the middle of a sprint
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a person is named in passing while the message is about something else
+  position: a short list of practical details
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 30
+  format: social media comment
+  domain: community
+  situation: a volunteer registers for a charity race
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: the writer keeps the details for a private message
+  position: none
+  indicator: present
+  length: very short
+  lines: *id001
+- slot: 31
+  format: informal email
+  domain: customer support
+  situation: a customer asks for a paper copy of a contract
+  kinds:
+  - fr_postal_address
+  full_record: false
+  data_role: accessory
+  reason: practical detail for a meeting, a delivery or a visit
+  position: last line before the sign-off
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 32
+  format: LinkedIn message
+  domain: sales prospecting
+  situation: a prospect asks for pricing details
+  kinds:
+  - person_name
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: so the reader can reach them or someone else
+  position: P.S.
+  indicator: absent
+  length: long
+  lines: *id004
+- slot: 33
+  format: informal email
+  domain: personal life
+  situation: siblings split the cost of a present
+  kinds:
+  - iban
+  - fr_siren
+  full_record: false
+  data_role: accessory
+  reason: company details needed for an invoice or a contract
+  position: opening sentence
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 34
+  format: SMS
+  domain: recruiting
+  situation: a recruiter asks whether a notice period can be shortened
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a person is named in passing while the message is about something else
+  position: opening sentence
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 35
+  format: informal email
+  domain: networking
+  situation: a former colleague proposes a coffee next time they are in town
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: the writer keeps the details for a private message
+  position: none
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 36
+  format: forum post
+  domain: community
+  situation: volunteers share the rota for a charity shop
+  kinds:
+  - person_name
+  - fr_postal_address
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: practical detail for a meeting, a delivery or a visit
+  position: last line before the sign-off
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 37
+  format: social media comment
+  domain: personal life
+  situation: a relative asks for photos from a wedding
+  kinds:
+  - email
+  full_record: false
+  data_role: accessory
+  reason: pasted with something else by mistake
+  position: middle of a sentence
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 38
+  format: informal email
+  domain: freelance missions
+  situation: a community manager asks for access to a client's page
+  kinds:
+  - person_name
+  - password
+  full_record: false
+  data_role: accessory
+  reason: pasted with something else by mistake
+  position: opening sentence
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 39
+  format: LinkedIn message
+  domain: networking
+  situation: a consultant asks to be introduced to a purchasing manager
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a company, brand or tool carrying a family name is mentioned
+  position: none
+  indicator: present
+  length: very short
+  lines: *id001
+- slot: 40
+  format: LinkedIn message
+  domain: networking
+  situation: an expert proposes a joint webinar
+  kinds:
+  - person_name
+  - fr_postal_address
+  - email
+  - birth_date
+  - phone
+  full_record: true
+  data_role: central
+  reason: sends everything an office or an employer asked for
+  position: middle of a sentence
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 41
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: customer support
+  situation: a user asks how to export their data
+  kinds:
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: so the reader can reach them or someone else
+  position: after the main point, as an afterthought
+  indicator: present
+  length: long
+  lines: *id004
+- slot: 42
+  format: LinkedIn message
+  domain: sales prospecting
+  situation: a training organisation promotes a course to HR managers
+  kinds:
+  - person_name
+  - phone
+  - email
+  full_record: false
+  data_role: accessory
+  reason: so the reader can reach them or someone else
+  position: middle of a sentence
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 43
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: recruiting
+  situation: a manager tells a candidate the job changed after a reorganisation
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a company, brand or tool carrying a family name is mentioned
+  position: none
+  indicator: present
+  length: very short
+  lines: *id001
+- slot: 44
+  format: informal email
+  domain: freelance missions
+  situation: a coach moves a session after a train strike
+  kinds:
+  - fr_postal_address
+  - email
+  full_record: false
+  data_role: accessory
+  reason: signature added out of habit
+  position: signature
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 45
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: personal life
+  situation: a neighbour warns about a car blocking the driveway
+  kinds:
+  - fr_license_plate
+  full_record: false
+  data_role: accessory
+  reason: identifies a car in a small everyday problem
+  position: a short list of practical details
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 46
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: networking
+  situation: a speaker thanks the organiser of a meetup
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a given name appears as an ordinary word, a place or a product
+  position: none
+  indicator: present
+  length: very short
+  lines: *id001
+- slot: 47
+  format: SMS
+  domain: freelance missions
+  situation: a self-employed electrician sends a rough quote by message
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a person is named in passing while the message is about something else
+  position: a short list of practical details
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 48
+  format: informal email
+  domain: recruiting
+  situation: an agency recruiter chases missing documents for a contract
+  kinds:
+  - person_name
+  - fr_passport
+  - fr_postal_address
+  - email
+  - bank_account_number
+  full_record: true
+  data_role: central
+  reason: sends everything an office or an employer asked for
+  position: after the main point, as an afterthought
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 49
+  format: social media comment
+  domain: customer support
+  situation: a support agent explains a refund delay
+  kinds:
+  - email
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: passes on a third person's contact
+  position: a short list of practical details
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 50
+  format: informal email
+  domain: community
+  situation: a volunteer organises a beach clean-up
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: the writer keeps the details for a private message
+  position: none
+  indicator: present
+  length: very short
+  lines: *id001
+- slot: 51
+  format: SMS
+  domain: personal life
+  situation: a roommate asks for their share of the electricity bill
+  kinds:
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: passes on a third person's contact
+  position: a short list of practical details
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 52
+  format: SMS
+  domain: sales prospecting
+  situation: a rep sends a case study after a call
+  kinds:
+  - person_name
+  - phone
+  - email
+  full_record: false
+  data_role: accessory
+  reason: so the reader can reach them or someone else
+  position: after the main point, as an afterthought
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 53
+  format: LinkedIn message
+  domain: recruiting
+  situation: a former colleague recommends someone for an open position
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a word like contact, mail or number appears with no value after it
+  position: none
+  indicator: present
+  length: long
+  lines: *id004
+- slot: 54
+  format: informal email
+  domain: sales prospecting
+  situation: a rep asks a client for a referral
+  kinds:
+  - person_name
+  - email
+  full_record: false
+  data_role: accessory
+  reason: so the reader can reach them or someone else
+  position: after the main point, as an afterthought
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 55
+  format: informal email
+  domain: personal life
+  situation: a relative sends news after a hospital visit
+  kinds:
+  - person_name
+  - iban
+  - fr_postal_address
+  - birth_date
+  - bank_account_number
+  full_record: true
+  data_role: central
+  reason: gives someone what they need to act on the writer's behalf
+  position: after the main point, as an afterthought
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 56
+  format: informal email
+  domain: customer support
+  situation: a subscriber asks for a discount to stay
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a person is named in passing while the message is about something else
+  position: opening sentence
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 57
+  format: social media comment
+  domain: community
+  situation: a parents' association asks for cake donations
+  kinds:
+  - phone
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: so the reader can reach them or someone else
+  position: a short list of practical details
+  indicator: absent
+  length: long
+  lines: *id004
+- slot: 58
+  format: LinkedIn message
+  domain: networking
+  situation: someone recommends an accountant to a contact
+  kinds:
+  - phone
+  - person_name
+  - email
+  full_record: false
+  data_role: central
+  reason: passes on a third person's contact
+  position: middle of a sentence
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 59
+  format: LinkedIn message
+  domain: recruiting
+  situation: a candidate asks whether the job can be part-time
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a company, brand or tool carrying a family name is mentioned
+  position: none
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 60
+  format: informal email
+  domain: personal life
+  situation: a parent reminds the other about the school run
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a person is named in passing while the message is about something else
+  position: a short list of practical details
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 61
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: freelance missions
+  situation: an interim manager sums up the first week for the sponsor
+  kinds:
+  - person_name
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: quoted from an earlier message
+  position: a quoted earlier message
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 62
+  format: forum post
+  domain: customer support
+  situation: a customer asks when a product is back in stock
+  kinds:
+  - phone
+  - person_name
+  - email
+  full_record: false
+  data_role: accessory
+  reason: so the reader can reach them or someone else
+  position: P.S.
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 63
+  format: LinkedIn message
+  domain: freelance missions
+  situation: a delivery platform driver disputes a payment
+  kinds:
+  - person_name
+  - phone
+  - birth_date
+  - email
+  full_record: true
+  data_role: central
+  reason: answers a request for details in one go
+  position: P.S.
+  indicator: present
+  length: long
+  lines: *id004
+- slot: 64
+  format: SMS
+  domain: freelance missions
+  situation: a freelancer announces holidays and who will cover
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a company, brand or tool carrying a family name is mentioned
+  position: none
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 65
+  format: informal email
+  domain: recruiting
+  situation: a recruiter moves an interview because the hiring manager is ill
+  kinds:
+  - fr_postal_address
+  full_record: false
+  data_role: accessory
+  reason: quoted from an earlier message
+  position: a quoted earlier message
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 66
+  format: social media comment
+  domain: community
+  situation: someone asks a town group about a road closure
+  kinds:
+  - person_name
+  - email
+  full_record: false
+  data_role: accessory
+  reason: so the reader can reach them or someone else
+  position: last line before the sign-off
+  indicator: absent
+  length: long
+  lines: *id004
+- slot: 67
+  format: SMS
+  domain: sales prospecting
+  situation: a rep asks who handles purchasing
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: pasted with something else by mistake
+  position: opening sentence
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 68
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: networking
+  situation: someone passes on a flat-share lead to a new contact in town
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: only a city, an age or an ordinary date appears
+  position: none
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 69
+  format: informal email
+  domain: sales prospecting
+  situation: a rep sends a contract for signature
+  kinds:
+  - person_name
+  - iban
+  - fr_social_security_number
+  - bank_account_number
+  full_record: true
+  data_role: central
+  reason: sends everything an office or an employer asked for
+  position: after the main point, as an afterthought
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 70
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: community
+  situation: someone asks for a reliable plumber nearby
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: quoted from an earlier message
+  position: a quoted earlier message
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 71
+  format: informal email
+  domain: freelance missions
+  situation: a wedding planner confirms the caterer's arrival time
+  kinds:
+  - fr_postal_address
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: practical detail for a meeting, a delivery or a visit
+  position: opening sentence
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 72
+  format: SMS
+  domain: personal life
+  situation: a couple sorts out who picks up the groceries
+  kinds:
+  - phone
+  - person_name
+  - email
+  full_record: false
+  data_role: central
+  reason: so the reader can reach them or someone else
+  position: a short list of practical details
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 73
+  format: LinkedIn message
+  domain: networking
+  situation: someone asks for feedback on their profile
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: only a city, an age or an ordinary date appears
+  position: none
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 74
+  format: informal email
+  domain: customer support
+  situation: a support agent follows up after closing a ticket
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: the writer keeps the details for a private message
+  position: none
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 75
+  format: LinkedIn message
+  domain: recruiting
+  situation: a recruiter closes a search and wishes the candidate good luck
+  kinds:
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: signature added out of habit
+  position: signature
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 76
+  format: SMS
+  domain: sales prospecting
+  situation: a solar panel installer offers a home visit
+  kinds:
+  - fr_postal_address
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: practical detail for a meeting, a delivery or a visit
+  position: a short list of practical details
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 77
+  format: social media comment
+  domain: personal life
+  situation: someone asks a friend for a lift to the airport
+  kinds:
+  - fr_postal_address
+  full_record: false
+  data_role: accessory
+  reason: practical detail for a meeting, a delivery or a visit
+  position: after the main point, as an afterthought
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 78
+  format: LinkedIn message
+  domain: networking
+  situation: a manager tells their network about a job change
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: nobody is identified, the text only speaks of teams, roles or groups
+  position: none
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 79
+  format: informal email
+  domain: customer support
+  situation: a user complains about unwanted newsletters
+  kinds:
+  - person_name
+  - email
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: passes on a third person's contact
+  position: a short list of practical details
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 80
+  format: informal email
+  domain: recruiting
+  situation: an apprentice looks for a host company for next year
+  kinds:
+  - person_name
+  - email
+  - phone
+  - fr_passport
+  full_record: true
+  data_role: central
+  reason: gives someone what they need to act on the writer's behalf
+  position: a short list of practical details
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 81
+  format: social media comment
+  domain: community
+  situation: someone sells a second-hand bike
+  kinds:
+  - fr_postal_address
+  - email
+  full_record: false
+  data_role: accessory
+  reason: pasted with something else by mistake
+  position: after the main point, as an afterthought
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 82
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: recruiting
+  situation: a manager thanks an agency for a quick hire
+  kinds:
+  - email
+  full_record: false
+  data_role: accessory
+  reason: so the reader can reach them or someone else
+  position: a short list of practical details
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 83
+  format: LinkedIn message
+  domain: sales prospecting
+  situation: a rep congratulates a startup on its funding and pitches
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: only a city, an age or an ordinary date appears
+  position: none
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 84
+  format: SMS
+  domain: freelance missions
+  situation: a freelancer asks a former client for a testimonial
+  kinds:
+  - person_name
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: so the reader can reach them or someone else
+  position: a short list of practical details
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 85
+  format: social media comment
+  domain: community
+  situation: residents report noisy works and ask who to call
+  kinds:
+  - fr_postal_address
+  full_record: false
+  data_role: accessory
+  reason: pasted with something else by mistake
+  position: opening sentence
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 86
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: freelance missions
+  situation: a web developer warns that the hosting renewal is due
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: only a city, an age or an ordinary date appears
+  position: none
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 87
+  format: LinkedIn message
+  domain: networking
+  situation: two people arrange to share a stand at a trade fair
+  kinds:
+  - person_name
+  - fr_postal_address
+  - email
+  - birth_date
+  full_record: true
+  data_role: central
+  reason: forwards a person's details to a colleague or a relative
+  position: P.S.
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 88
+  format: forum post
+  domain: customer support
+  situation: a subscriber asks to cancel before the renewal
+  kinds:
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: passes on a third person's contact
+  position: a short list of practical details
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 89
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: networking
+  situation: someone congratulates a contact on a promotion
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a person is named in passing while the message is about something else
+  position: a short list of practical details
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 90
+  format: SMS
+  domain: personal life
+  situation: a friend cancels dinner at the last minute
+  kinds:
+  - phone
+  - person_name
+  - email
+  full_record: false
+  data_role: accessory
+  reason: so the reader can reach them or someone else
+  position: after the main point, as an afterthought
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 91
+  format: LinkedIn message
+  domain: recruiting
+  situation: a former boss congratulates someone on a new job
+  kinds:
+  - phone
+  - email
+  full_record: false
+  data_role: central
+  reason: so the reader can reach them or someone else
+  position: a short list of practical details
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 92
+  format: SMS
+  domain: sales prospecting
+  situation: a prospect politely says not now
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a given name appears as an ordinary word, a place or a product
+  position: none
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 93
+  format: informal email
+  domain: personal life
+  situation: a holiday group sorts out the rental deposit
+  kinds:
+  - person_name
+  - fr_driving_licence
+  - fr_postal_address
+  - birth_date
+  - iban
+  full_record: true
+  data_role: central
+  reason: answers a request for details in one go
+  position: P.S.
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 94
+  format: LinkedIn message
+  domain: networking
+  situation: a mentee sends news after a difficult quarter
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a given name appears as an ordinary word, a place or a product
+  position: none
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 95
+  format: SMS
+  domain: community
+  situation: someone warns the neighbours about a scam phone call
+  kinds:
+  - person_name
+  - email
+  full_record: false
+  data_role: central
+  reason: passes on a third person's contact
+  position: a short list of practical details
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 96
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: freelance missions
+  situation: a video editor shares the final cut and asks for approval
+  kinds:
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: quoted from an earlier message
+  position: a quoted earlier message
+  indicator: absent
+  length: long
+  lines: *id004
+- slot: 97
+  format: LinkedIn message
+  domain: recruiting
+  situation: a candidate sends a thank-you note after an interview
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a company, brand or tool carrying a family name is mentioned
+  position: none
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 98
+  format: chat message (Slack, Teams, WhatsApp)
+  domain: personal life
+  situation: a stranger reports finding a lost wallet
+  kinds:
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: so the reader can reach them or someone else
+  position: opening sentence
+  indicator: absent
+  length: very short
+  lines: *id001
+- slot: 99
+  format: LinkedIn message
+  domain: sales prospecting
+  situation: a cleaning company offers a quote to an office manager
+  kinds:
+  - phone
+  - fr_siret
+  full_record: false
+  data_role: accessory
+  reason: signature added out of habit
+  position: signature
+  indicator: present
+  length: very short
+  lines: *id001
+- slot: 100
+  format: informal email
+  domain: customer support
+  situation: a mover confirms the slot for a delivery
+  kinds:
+  - phone
+  - fr_postal_address
+  - email
+  full_record: false
+  data_role: accessory
+  reason: signature added out of habit
+  position: signature
+  indicator: absent
+  length: short
+  lines: *id002

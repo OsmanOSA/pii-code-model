@@ -1,0 +1,22 @@
+# Never committed: downloads, filled datasets, real annotated sets
+data/
+# Training outputs
+runs/
+*.onnx
+*.safetensors
+*.pt
+*.bin
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Editors and OS (OneDrive adds desktop.ini)
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

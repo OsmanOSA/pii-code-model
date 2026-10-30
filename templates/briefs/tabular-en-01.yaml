@@ -1,0 +1,824 @@
+# Drawn by `python -m datagen briefs`. Do not edit by hand: delete the file to draw again.
+- slot: 1
+  format: SQL dump (.sql)
+  domain: retail
+  situation: store stock counts, compared with last month
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: identifiers are technical, such as order numbers or UUIDs
+  position: none
+  indicator: present
+  length: medium
+  lines: &id002
+  - 16
+  - 40
+- slot: 2
+  format: fixed-width export
+  domain: education
+  situation: library loans, requested by a regulator
+  kinds:
+  - phone
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a note someone typed in a comment cell
+  position: a free-text comment cell
+  indicator: present
+  length: short
+  lines: &id001
+  - 3
+  - 15
+- slot: 3
+  format: .csv
+  domain: housing
+  situation: void properties, exported for a quarterly audit
+  kinds:
+  - email
+  full_record: false
+  data_role: central
+  reason: the person who produced the export
+  position: a title or note row above the table
+  indicator: absent
+  length: short
+  lines: *id001
+- slot: 4
+  format: .csv
+  domain: healthcare
+  situation: equipment maintenance, cleaned up before a mail merge
+  kinds:
+  - email
+  - person_name
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: a contact column kept from the source system
+  position: a few rows only, the others empty
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 5
+  format: .csv
+  domain: housing
+  situation: rent arrears, kept as a manual backup
+  kinds:
+  - person_name
+  - iban
+  - uk_national_insurance_number
+  - birth_date
+  full_record: true
+  data_role: central
+  reason: the export is a list of people with their details
+  position: a few rows only, the others empty
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 6
+  format: spreadsheet as text
+  domain: charities
+  situation: Gift Aid donors, sent to an outside accountant
+  kinds:
+  - postal_address
+  full_record: false
+  data_role: accessory
+  reason: needed to deliver, visit or invoice
+  position: a footer row
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 7
+  format: fixed-width export
+  domain: payroll
+  situation: cycle-to-work scheme, used to debug an import
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: announcing headers hold only statuses or department names
+  position: none
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 8
+  format: .tsv
+  domain: retail
+  situation: supplier delivery slots, kept as a manual backup
+  kinds:
+  - phone
+  - uk_license_plate
+  full_record: false
+  data_role: accessory
+  reason: a vehicle is part of the record
+  position: a title or note row above the table
+  indicator: present
+  length: long
+  lines: &id003
+  - 41
+  - 90
+- slot: 9
+  format: .csv
+  domain: education
+  situation: school trip payments, attached to a ticket
+  kinds:
+  - payment_card
+  full_record: false
+  data_role: accessory
+  reason: needed to pay or reimburse
+  position: first column
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 10
+  format: .tsv
+  domain: healthcare
+  situation: patient transport bookings, sampled for a test environment
+  kinds:
+  - person_name
+  - phone
+  - uk_national_insurance_number
+  - postal_address
+  - uk_driving_licence
+  full_record: true
+  data_role: central
+  reason: an onboarding sheet gathers each person's details
+  position: a free-text comment cell
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 11
+  format: .tsv
+  domain: healthcare
+  situation: waiting referrals, merged from two sources
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: figures per team, site or product, with no person
+  position: none
+  indicator: absent
+  length: medium
+  lines: *id002
+- slot: 12
+  format: spreadsheet as text
+  domain: housing
+  situation: tenant satisfaction survey, shared with a manager for a meeting
+  kinds:
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: a contact column kept from the source system
+  position: a column with a neutral header
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 13
+  format: spreadsheet as text
+  domain: payroll
+  situation: holiday balances, sampled for a test environment
+  kinds:
+  - phone
+  - person_name
+  full_record: false
+  data_role: central
+  reason: a contact column kept from the source system
+  position: a footer row
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 14
+  format: Markdown table
+  domain: charities
+  situation: mailing list, prepared for a migration to a new tool
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: identifiers are technical, such as order numbers or UUIDs
+  position: none
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 15
+  format: Markdown table
+  domain: education
+  situation: after-school clubs, kept as a manual backup
+  kinds:
+  - person_name
+  - birth_date
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: a few rows only, the others empty
+  indicator: absent
+  length: medium
+  lines: *id002
+- slot: 16
+  format: .tsv
+  domain: retail
+  situation: staff rota by store, cleaned up before a mail merge
+  kinds:
+  - email
+  full_record: false
+  data_role: accessory
+  reason: a note someone typed in a comment cell
+  position: a free-text comment cell
+  indicator: absent
+  length: medium
+  lines: *id002
+- slot: 17
+  format: spreadsheet as text
+  domain: payroll
+  situation: expenses to reimburse, sampled for a test environment
+  kinds:
+  - postal_address
+  - iban
+  full_record: false
+  data_role: central
+  reason: needed to pay or reimburse
+  position: a footer row
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 18
+  format: fixed-width export
+  domain: housing
+  situation: contractor invoices, requested by a regulator
+  kinds:
+  - postal_address
+  - bank_account_number
+  - person_name
+  full_record: false
+  data_role: central
+  reason: needed to pay or reimburse
+  position: a title or note row above the table
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 19
+  format: .csv
+  domain: healthcare
+  situation: pharmacy orders, exported for a quarterly audit
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: announcing headers hold only statuses or department names
+  position: none
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 20
+  format: spreadsheet as text
+  domain: charities
+  situation: volunteer shifts, compared with last month
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a note someone typed in a comment cell
+  position: a free-text comment cell
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 21
+  format: SQL dump (.sql)
+  domain: payroll
+  situation: pension auto-enrolment list, attached to a ticket
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: figures per team, site or product, with no person
+  position: none
+  indicator: present
+  length: long
+  lines: *id003
+- slot: 22
+  format: fixed-width export
+  domain: education
+  situation: free school meals, used to debug an import
+  kinds:
+  - uk_national_insurance_number
+  full_record: false
+  data_role: central
+  reason: the file is about these people
+  position: first column
+  indicator: present
+  length: long
+  lines: *id003
+- slot: 23
+  format: Markdown table
+  domain: retail
+  situation: returned goods, sent to an outside accountant
+  kinds:
+  - postal_address
+  - email
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: a title or note row above the table
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 24
+  format: SQL dump (.sql)
+  domain: retail
+  situation: loyalty scheme members, prepared for a migration to a new tool
+  kinds:
+  - person_name
+  - uk_national_insurance_number
+  - birth_date
+  - postal_address
+  full_record: true
+  data_role: central
+  reason: an onboarding sheet gathers each person's details
+  position: a few rows only, the others empty
+  indicator: absent
+  length: medium
+  lines: *id002
+- slot: 25
+  format: SQL dump (.sql)
+  domain: healthcare
+  situation: vaccination sessions, shared with a manager for a meeting
+  kinds:
+  - uk_passport
+  - birth_date
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: middle column
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 26
+  format: fixed-width export
+  domain: charities
+  situation: shop takings, prepared for a migration to a new tool
+  kinds:
+  - person_name
+  - phone
+  full_record: false
+  data_role: central
+  reason: a note someone typed in a comment cell
+  position: a free-text comment cell
+  indicator: absent
+  length: long
+  lines: *id003
+- slot: 27
+  format: .csv
+  domain: housing
+  situation: estate inspections, merged from two sources
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: announcing headers hold only statuses or department names
+  position: none
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 28
+  format: SQL dump (.sql)
+  domain: retail
+  situation: click-and-collect orders, shared with a manager for a meeting
+  kinds:
+  - iban
+  full_record: false
+  data_role: central
+  reason: needed to pay or reimburse
+  position: a column with a neutral header
+  indicator: absent
+  length: short
+  lines: *id001
+- slot: 29
+  format: spreadsheet as text
+  domain: housing
+  situation: gas safety checks, exported for a quarterly audit
+  kinds:
+  - phone
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a contact column kept from the source system
+  position: last column
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 30
+  format: .csv
+  domain: healthcare
+  situation: clinic appointment list, sent to an outside accountant
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: names appear only as eponyms, products or companies
+  position: none
+  indicator: absent
+  length: long
+  lines: *id003
+- slot: 31
+  format: SQL dump (.sql)
+  domain: payroll
+  situation: bonus run, sampled for a test environment
+  kinds:
+  - email
+  full_record: false
+  data_role: central
+  reason: a contact column kept from the source system
+  position: a footer row
+  indicator: present
+  length: long
+  lines: *id003
+- slot: 32
+  format: .csv
+  domain: payroll
+  situation: starters and leavers, merged from two sources
+  kinds:
+  - person_name
+  - payment_card
+  - postal_address
+  - uk_national_insurance_number
+  full_record: true
+  data_role: central
+  reason: the export is a list of people with their details
+  position: a footer row
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 33
+  format: .csv
+  domain: education
+  situation: room bookings, merged from two sources
+  kinds:
+  - person_name
+  - email
+  - phone
+  full_record: false
+  data_role: central
+  reason: a note someone typed in a comment cell
+  position: a free-text comment cell
+  indicator: absent
+  length: medium
+  lines: *id002
+- slot: 34
+  format: spreadsheet as text
+  domain: charities
+  situation: event sign-ups, prepared for a migration to a new tool
+  kinds:
+  - postal_address
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: a free-text comment cell
+  indicator: present
+  length: long
+  lines: *id003
+- slot: 35
+  format: spreadsheet as text
+  domain: retail
+  situation: price changes, attached to a ticket
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: figures per team, site or product, with no person
+  position: none
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 36
+  format: .tsv
+  domain: charities
+  situation: membership renewals, used to debug an import
+  kinds:
+  - person_name
+  - postal_address
+  - uk_driving_licence
+  - bank_account_number
+  - birth_date
+  full_record: true
+  data_role: central
+  reason: the export is a list of people with their details
+  position: a footer row
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 37
+  format: .csv
+  domain: healthcare
+  situation: agency staff shifts, used to debug an import
+  kinds:
+  - bank_account_number
+  - postal_address
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: a column with a neutral header
+  indicator: absent
+  length: medium
+  lines: *id002
+- slot: 38
+  format: fixed-width export
+  domain: education
+  situation: staff training records, kept as a manual backup
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: names appear only as eponyms, products or companies
+  position: none
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 39
+  format: fixed-width export
+  domain: payroll
+  situation: statutory sick pay, compared with last month
+  kinds:
+  - uk_national_insurance_number
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: a free-text comment cell
+  indicator: absent
+  length: long
+  lines: *id003
+- slot: 40
+  format: fixed-width export
+  domain: housing
+  situation: repairs log, cleaned up before a mail merge
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: the person who produced the export
+  position: a title or note row above the table
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 41
+  format: .csv
+  domain: retail
+  situation: gift card sales, requested by a regulator
+  kinds:
+  - bank_account_number
+  - iban
+  full_record: false
+  data_role: accessory
+  reason: needed to pay or reimburse
+  position: middle column
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 42
+  format: SQL dump (.sql)
+  domain: education
+  situation: governors' meeting attendance, requested by a regulator
+  kinds:
+  - person_name
+  - email
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: a contact column kept from the source system
+  position: last column
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 43
+  format: .tsv
+  domain: healthcare
+  situation: bed occupancy, sent to an outside accountant
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: figures per team, site or product, with no person
+  position: none
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 44
+  format: SQL dump (.sql)
+  domain: charities
+  situation: grant applications, sampled for a test environment
+  kinds:
+  - card_security_code
+  - iban
+  full_record: false
+  data_role: accessory
+  reason: needed to pay or reimburse
+  position: a footer row
+  indicator: absent
+  length: long
+  lines: *id003
+- slot: 45
+  format: .tsv
+  domain: housing
+  situation: waiting list, shared with a manager for a meeting
+  kinds:
+  - postal_address
+  full_record: false
+  data_role: accessory
+  reason: needed to deliver, visit or invoice
+  position: a title or note row above the table
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 46
+  format: .tsv
+  domain: payroll
+  situation: monthly overtime claims, sent to an outside accountant
+  kinds:
+  - person_name
+  - bank_account_number
+  - postal_address
+  - uk_national_insurance_number
+  full_record: true
+  data_role: central
+  reason: an onboarding sheet gathers each person's details
+  position: last column
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 47
+  format: Markdown table
+  domain: payroll
+  situation: statutory sick pay, used to debug an import
+  kinds:
+  - phone
+  - person_name
+  - postal_address
+  full_record: false
+  data_role: accessory
+  reason: needed to deliver, visit or invoice
+  position: first column
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 48
+  format: Markdown table
+  domain: housing
+  situation: rent arrears, exported for a quarterly audit
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: identifiers are technical, such as order numbers or UUIDs
+  position: none
+  indicator: absent
+  length: short
+  lines: *id001
+- slot: 49
+  format: SQL dump (.sql)
+  domain: education
+  situation: staff training records, cleaned up before a mail merge
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a note someone typed in a comment cell
+  position: a free-text comment cell
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 50
+  format: .tsv
+  domain: charities
+  situation: food bank parcels, kept as a manual backup
+  kinds:
+  - person_name
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: a contact column kept from the source system
+  position: first column
+  indicator: absent
+  length: short
+  lines: *id001
+- slot: 51
+  format: SQL dump (.sql)
+  domain: healthcare
+  situation: agency staff shifts, compared with last month
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: names appear only as eponyms, products or companies
+  position: none
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 52
+  format: .tsv
+  domain: payroll
+  situation: holiday balances, attached to a ticket
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a contact column kept from the source system
+  position: a free-text comment cell
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 53
+  format: .tsv
+  domain: retail
+  situation: returned goods, merged from two sources
+  kinds:
+  - postal_address
+  - bank_account_number
+  full_record: false
+  data_role: accessory
+  reason: needed to pay or reimburse
+  position: a footer row
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 54
+  format: .tsv
+  domain: healthcare
+  situation: clinic appointment list, prepared for a migration to a new tool
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: figures per team, site or product, with no person
+  position: none
+  indicator: absent
+  length: short
+  lines: *id001
+- slot: 55
+  format: Markdown table
+  domain: education
+  situation: governors' meeting attendance, sampled for a test environment
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a note someone typed in a comment cell
+  position: a free-text comment cell
+  indicator: absent
+  length: long
+  lines: *id003
+- slot: 56
+  format: spreadsheet as text
+  domain: payroll
+  situation: bonus run, cleaned up before a mail merge
+  kinds:
+  - iban
+  full_record: false
+  data_role: accessory
+  reason: needed to pay or reimburse
+  position: a column with a neutral header
+  indicator: absent
+  length: long
+  lines: *id003
+- slot: 57
+  format: Markdown table
+  domain: retail
+  situation: loyalty scheme members, compared with last month
+  kinds:
+  - postal_address
+  - person_name
+  - phone
+  full_record: false
+  data_role: central
+  reason: the file is about these people
+  position: a footer row
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 58
+  format: fixed-width export
+  domain: housing
+  situation: waiting list, requested by a regulator
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: names appear only as eponyms, products or companies
+  position: none
+  indicator: present
+  length: medium
+  lines: *id002
+- slot: 59
+  format: Markdown table
+  domain: charities
+  situation: event sign-ups, kept as a manual backup
+  kinds:
+  - postal_address
+  - phone
+  full_record: false
+  data_role: central
+  reason: needed to deliver, visit or invoice
+  position: a column with a neutral header
+  indicator: present
+  length: long
+  lines: *id003
+- slot: 60
+  format: spreadsheet as text
+  domain: education
+  situation: exam entries, cleaned up before a mail merge
+  kinds:
+  - person_name
+  - birth_date
+  - postal_address
+  - email
+  - uk_national_insurance_number
+  full_record: true
+  data_role: central
+  reason: a master file of customers or staff was copied whole
+  position: first column
+  indicator: absent
+  length: long
+  lines: *id003

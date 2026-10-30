@@ -1,0 +1,625 @@
+# Tables drawn from by datagen/briefs.py, for the cells of templates/plan.yaml with `briefs: true`.
+# Kinds here are generic: `kinds` and `locale_kinds` turn them into the schema's kinds for a fill locale.
+# Weights say what is plausible for a format: a kind absent from a format is never drawn for it.
+record_share: 0.12            # share of templates with a full record: four kinds or more on one person
+kind_count_weights: {1: 45, 2: 35, 3: 20}   # kinds per template, among those that are neither empty nor a record
+mixed_locales: {fr_FR: 50, en_US: 25, en_GB: 25}
+person_kinds: [name, email, phone, address, birth_date, national_id, tax_id, identity_card, passport, driving_licence, iban, bank_account, payment_card]
+
+kinds:
+  name: person_name
+  email: email
+  phone: phone
+  birth_date: birth_date
+  iban: iban
+  bank_account: bank_account_number
+  payment_card: payment_card
+  card_code: card_security_code
+  password: password
+  opaque_token: opaque_token
+  url_password: url_password
+  private_key: private_key
+  jwt: jwt
+  api_key: [github_token, gitlab_token, slack_token, google_api_key, huggingface_token, npm_token, sendgrid_api_key, openai_api_key, anthropic_api_key, stripe_secret_key, aws_access_key_id]
+
+locale_kinds:
+  fr_FR:
+    address: fr_postal_address
+    national_id: fr_social_security_number
+    tax_id: fr_tax_number
+    identity_card: fr_identity_card
+    passport: fr_passport
+    driving_licence: fr_driving_licence
+    plate: fr_license_plate
+    company_id: [fr_siren, fr_siret]
+  en_GB:
+    address: postal_address
+    national_id: uk_national_insurance_number
+    passport: uk_passport
+    driving_licence: uk_driving_licence
+    plate: uk_license_plate
+  en_US:
+    address: postal_address
+    national_id: us_ssn
+    tax_id: us_itin
+    passport: us_passport
+    driving_licence: us_driver_license
+    plate: us_license_plate
+
+families:
+  natural:
+    no_indicator_share: 0.6
+    accessory_share: 0.85
+    record_tag: admin
+    base_kinds: [name, phone, email]   # any text between people may hold these
+    tag_boost: 10                      # a kind a tag brings weighs this much more: the situation is why it is there
+    tag_kinds:                         # what a situation's tags add to them
+      logistics: [address]
+      vehicle: [plate]
+      money: [iban, bank_account, company_id]
+      access: [password, opaque_token]
+      admin: [address, birth_date, national_id, tax_id, identity_card, passport, driving_licence, iban, bank_account]
+    lengths:
+      - {name: very short, lines: [1, 2], weight: 25}
+      - {name: short, lines: [3, 6], weight: 40}
+      - {name: medium, lines: [7, 15], weight: 25}
+      - {name: long, lines: [16, 40], weight: 10}
+    formats:
+      SMS: {name: 7, phone: 5, address: 4, plate: 2, password: 1, iban: 1, email: 1, birth_date: 1}
+      chat message: {name: 8, phone: 4, email: 3, address: 3, iban: 2, password: 3, plate: 1, birth_date: 1, opaque_token: 1}
+      LinkedIn message: {name: 8, email: 5, phone: 5, address: 1, company_id: 2, birth_date: 1}
+      informal email: {name: 8, email: 5, phone: 5, address: 4, iban: 3, birth_date: 2, national_id: 1, company_id: 2, bank_account: 1, identity_card: 1, passport: 1, driving_licence: 1, plate: 1, password: 1}
+      forum post: {name: 2, email: 3, phone: 3, address: 2, plate: 3, password: 1, iban: 1, company_id: 1}
+      social media comment: {name: 5, phone: 2, email: 2, address: 1, plate: 1}
+    record_formats: [informal email, chat message, LinkedIn message]
+    domain_formats:
+      recruiting: [LinkedIn message, informal email, chat message, SMS]
+      freelance missions: [LinkedIn message, informal email, chat message, SMS]
+      sales prospecting: [LinkedIn message, informal email, SMS]
+      networking: [LinkedIn message, informal email, chat message]
+      personal life: [SMS, chat message, informal email, social media comment]
+      customer support: [informal email, chat message, social media comment, forum post]
+      community: [forum post, chat message, social media comment, informal email, SMS]
+    positions:
+      - opening sentence
+      - middle of a sentence
+      - after the main point, as an afterthought
+      - last line before the sign-off
+      - {text: P.S., not: [SMS, chat message, social media comment]}
+      - a short list of practical details
+    reasons:   # fits: covers every kind; key: one kind is its point; needs: a tag of the situation; not: formats it cannot be
+      - {text: so the reader can reach them or someone else, fits: [name, phone, email], key: [phone, email], weight: 4}
+      - {text: passes on a third person's contact, fits: [name, phone, email], key: [phone, email]}
+      - {text: a person is named in passing while the message is about something else, fits: [name], role: accessory, weight: 6}
+      - {text: signature added out of habit, fits: [name, phone, email, address, company_id], role: accessory, position: signature, not: [SMS, chat message, social media comment]}
+      - {text: "practical detail for a meeting, a delivery or a visit", fits: [name, address, phone], key: [address, phone], needs: logistics, weight: 5}
+      - {text: money has to change hands, fits: [name, iban, bank_account], key: [iban, bank_account], needs: money}
+      - {text: shares an access code with someone they trust, fits: [name, password, opaque_token, phone], key: [password, opaque_token], needs: access}
+      - {text: identifies a car in a small everyday problem, fits: [name, plate, phone], key: [plate], needs: vehicle}
+      - {text: a form or an office asked for it, fits: [name, birth_date, national_id, tax_id, identity_card, passport, driving_licence, company_id, bank_account, iban, address], key: [birth_date, national_id, tax_id, identity_card, passport, driving_licence, bank_account, iban], needs: admin, role: central}
+      - {text: a date of birth matters for a practical reason, fits: [name, birth_date], key: [birth_date], needs: admin}
+      - {text: company details needed for an invoice or a contract, fits: [name, company_id, address, iban, email], key: [company_id], needs: money}
+      - {text: quoted from an earlier message, role: accessory, weight: 1, position: a quoted earlier message, not: [SMS, social media comment]}
+      - {text: pasted with something else by mistake, role: accessory, weight: 1}
+    record_reasons:
+      - sends everything an office or an employer asked for
+      - gives someone what they need to act on the writer's behalf
+      - answers a request for details in one go
+      - forwards a person's details to a colleague or a relative
+    empty_reasons:
+      - nobody is identified, the text only speaks of teams, roles or groups
+      - a given name appears as an ordinary word, a place or a product
+      - {text: "a word like contact, mail or number appears with no value after it", indicator: present}
+      - the writer keeps the details for a private message
+      - a company, brand or tool carrying a family name is mentioned
+      - only a city, an age or an ordinary date appears
+    situations:
+      recruiting:
+        - a recruiter proposes a product manager role to someone settled in their job for years
+        - a candidate asks why they heard nothing after a second interview
+        - a recruiter moves an interview because the hiring manager is ill | logistics
+        - a candidate declines an offer because of the commute
+        - a former colleague recommends someone for an open position
+        - a hiring manager asks a recruiter for feedback on a junior profile
+        - a candidate negotiates remote days before signing
+        - a recruiter asks whether a notice period can be shortened
+        - an intern asks a former tutor for a reference
+        - a recruiter apologises for mixing up two CVs
+        - a candidate asks what to bring to an on-site technical test | logistics
+        - a staffing agency offers a temp job starting next Monday | admin, logistics
+        - an employee tips a friend about a job before it is published
+        - a recruiter checks salary expectations in two lines
+        - a candidate sends a thank-you note after an interview
+        - an HR assistant confirms a start date and the first-day schedule | admin, logistics
+        - a graduate asks a stranger how they got into data engineering
+        - a recruiter closes a search and wishes the candidate good luck
+        - a candidate asks about the company car policy before accepting | vehicle
+        - a manager tells a candidate the job changed after a reorganisation
+        - a headhunter asks for names of good sales people in the region
+        - a candidate moves a call because of childcare
+        - a job seeker asks a contact to proofread a cover letter | admin
+        - a recruiter explains how to reach a plant for a site visit | logistics, vehicle
+        - a candidate reports a broken link in the application form | admin
+        - a trainee asks about the end-of-contract paperwork | admin, money
+        - an apprentice looks for a host company for next year | admin
+        - a hiring manager asks a colleague to sit in on an interview
+        - an agency recruiter chases missing documents for a contract | admin, money
+        - a candidate asks whether the job can be part-time
+        - a former boss congratulates someone on a new job
+        - a recruiter asks a candidate to confirm their availability for a panel
+        - a manager thanks an agency for a quick hire
+        - a candidate asks for feedback after a rejection
+        - a candidate asks how to get to the assessment centre | logistics
+        - a recruiter sends a salary simulation before an offer | money
+      freelance missions:
+        - a freelance developer chases an invoice two months late | money
+        - a client asks a designer for a small change after delivery
+        - a photographer confirms the time and place of a shoot | logistics
+        - a translator warns about a delay on a long document
+        - a consultant proposes a day rate for a three-week mission | money
+        - a client cancels a workshop the day before | logistics
+        - a freelancer passes a mission on to a trusted peer
+        - a copywriter asks for a brief that never arrived
+        - a client asks for a quote for a website redesign | money
+        - a self-employed electrician sends a rough quote by message | money, logistics
+        - a video editor shares the final cut and asks for approval | access
+        - a freelancer asks a former client for a testimonial
+        - an accountant reminds a freelancer of a filing deadline | money, admin
+        - a trainer asks how the room will be set up before a session | logistics
+        - a community manager asks for access to a client's page | access
+        - a client changes the scope in the middle of a sprint
+        - a developer hands a project over at the end of a mission | access
+        - a freelancer announces holidays and who will cover
+        - two freelancers split a contract and its payment | money, admin
+        - a graphic designer asks which logo file to use
+        - a client pays a deposit and asks for a receipt | money
+        - a coach moves a session after a train strike | logistics
+        - an interim manager sums up the first week for the sponsor
+        - a freelancer asks a client's finance team where the purchase order is | money
+        - a consultant declines a mission for lack of time
+        - a web developer warns that the hosting renewal is due | access, money
+        - a client asks a freelancer to sign a confidentiality agreement | admin
+        - an illustrator negotiates usage rights for a poster
+        - a sound engineer asks for the venue's technical sheet | logistics
+        - a private tutor bills the month's lessons to a parent | money
+        - a delivery platform driver disputes a payment | money, vehicle, admin
+        - a bookkeeper asks a client for last quarter's receipts | money, admin
+        - a wedding planner confirms the caterer's arrival time | logistics
+        - a client asks a handyman when they can come by | logistics
+        - a language teacher proposes a new schedule for online lessons
+      networking:
+        - someone met at a conference follows up on a conversation
+        - an alumni member asks for advice on changing sector
+        - a founder asks for an introduction to an investor | admin
+        - a speaker thanks the organiser of a meetup
+        - a former colleague proposes a coffee next time they are in town | logistics
+        - a consultant asks to be introduced to a purchasing manager
+        - a student asks a professional for a short call
+        - a meetup organiser looks for a host for the next event | logistics
+        - someone congratulates a contact on a promotion
+        - a peer asks for a tool recommendation
+        - a manager tells their network about a job change
+        - a mentor sets the date of the next session
+        - a mentee sends news after a difficult quarter
+        - a contact asks for an opinion on a draft article
+        - two people arrange to share a stand at a trade fair | admin, logistics
+        - someone asks to reuse a slide from a talk
+        - an entrepreneur looks for a co-founder through a friend
+        - someone apologises for missing a networking dinner
+        - a former classmate organises a reunion | logistics
+        - an expert proposes a joint webinar | admin
+        - someone asks for feedback on their profile
+        - a group member suggests a lunch for local founders | logistics
+        - a contact asks for an introduction to a journalist
+        - a consultant sends an article related to their last conversation
+        - someone moves to a new city and asks who to meet
+        - a peer asks how another company handled a reorganisation
+        - someone recommends an accountant to a contact
+        - an organiser sends the practical details of a breakfast | logistics
+        - a contact sends new year wishes and proposes catching up
+        - an old mentor asks for news
+        - someone asks to be invited on a podcast
+        - someone passes on a flat-share lead to a new contact in town | logistics
+        - a former intern asks for a letter of recommendation
+        - a speaker sends their details for a conference badge | admin
+        - an organiser collects details for a venue's visitor list | admin
+      customer support:
+        - a customer reports a parcel marked delivered that never arrived | logistics
+        - a subscriber asks to cancel before the renewal
+        - a customer complains about being charged twice | money
+        - a user locked out of an account asks for help | admin, access
+        - a support agent asks for a photo of a damaged item
+        - a customer asks for an invoice in their company's name | money
+        - a buyer asks to change the delivery address after ordering | logistics
+        - a support agent explains a refund delay | money
+        - a customer asks when a product is back in stock
+        - a client complains about a technician who did not show up | logistics
+        - a customer asks for a warranty repair | logistics
+        - a user reports a bug in a mobile app
+        - a traveller asks for a refund after a cancelled train | money
+        - a customer complains about three days without internet | logistics
+        - a support agent asks to confirm a detail before making a change | admin
+        - a customer disputes a late fee | money
+        - a tenant asks an energy supplier about a meter reading | logistics
+        - a buyer describes a bad experience with a shop
+        - a customer praises a support agent
+        - a user asks how to export their data
+        - a support agent follows up after closing a ticket
+        - a customer asks for a paper copy of a contract | logistics
+        - an insurance customer asks where a claim stands | admin, money, vehicle
+        - a customer asks to merge two accounts | admin
+        - a user complains about unwanted newsletters
+        - a customer wants to return a gift without a receipt | logistics
+        - a subscriber asks for a discount to stay
+        - a customer asks a bank why a card was refused | money, admin
+        - a user asks to delete their account | admin
+        - a mover confirms the slot for a delivery | logistics
+        - a customer asks a garage when the car will be ready | vehicle
+        - a customer asks why their loyalty points vanished
+        - a client asks a hotel to change a booking | logistics
+      sales prospecting:
+        - a sales rep offers a demo of an accounting tool
+        - a rep follows up on an unanswered email
+        - a salesperson proposes lunch to a local business owner | logistics
+        - a vendor announces a price change to a prospect | money
+        - an insurance broker proposes reviewing a company's contracts | admin
+        - a rep asks who handles purchasing
+        - a reseller proposes a bundle to a small shop
+        - a rep sends a case study after a call
+        - an agency offers a free audit of a website
+        - a prospect politely says not now
+        - a prospect asks for pricing details
+        - a sales rep confirms an appointment at a prospect's office | logistics
+        - a rep congratulates a startup on its funding and pitches
+        - a solar panel installer offers a home visit | logistics
+        - a training organisation promotes a course to HR managers
+        - a rep asks a client for a referral
+        - a supplier asks a restaurant owner to try samples | logistics
+        - a prospect asks for a longer trial
+        - a rep sends a contract for signature | admin, money
+        - a recruitment agency pitches its services to a founder
+        - a cleaning company offers a quote to an office manager | logistics, money
+        - a rep hands an account over to a colleague | admin
+        - a prospect sends what is needed to open an account | admin, money
+      personal life:
+        - someone asks a neighbour to water the plants during a trip | logistics, access
+        - a friend organises a birthday surprise | logistics, money
+        - siblings split the cost of a present | money
+        - a parent reminds the other about the school run
+        - a friend asks to borrow a car for the weekend | vehicle
+        - a host gives guests what they need for a holiday rental | logistics, access
+        - a roommate asks for their share of the electricity bill | money
+        - a friend sends directions to a party | logistics
+        - a couple sorts out who picks up the groceries
+        - a relative asks for photos from a wedding
+        - a friend recommends a dentist
+        - a neighbour warns about a car blocking the driveway | vehicle
+        - a friend cancels dinner at the last minute
+        - a cousin plans a family reunion | logistics
+        - a friend sells a sofa to another friend | money, logistics
+        - a parent asks a babysitter to come earlier | logistics, access
+        - someone asks a friend for a lift to the airport | logistics, vehicle
+        - a friend congratulates a couple on their engagement
+        - a relative sends news after a hospital visit | admin
+        - a stranger reports finding a lost wallet | admin
+        - a holiday group sorts out the rental deposit | money, admin, logistics
+        - a friend asks for help moving house | logistics, vehicle
+        - someone helps an elderly parent fill in a form | admin
+        - a friend forwards what a landlord asked for | admin, money
+      community:
+        - a neighbour proposes a street party | logistics
+        - a sports club member looks for a carpool to a match | logistics, vehicle
+        - someone asks for a reliable plumber nearby
+        - a volunteer organises a beach clean-up | logistics
+        - a parents' association asks for cake donations
+        - a residents' group complains about a broken lift | logistics
+        - someone sells a second-hand bike | money, logistics
+        - a gardening group announces a plant swap | logistics
+        - a choir member announces a rehearsal change | logistics
+        - someone warns the neighbours about a scam phone call
+        - a co-owner proposes a vote on repainting the hallway | admin
+        - someone asks for help with an old sewing machine
+        - neighbours look for a lost cat | logistics
+        - a volunteer asks for drivers for a food collection | logistics, vehicle, admin
+        - a neighbourhood group recommends a babysitter
+        - someone shares tips on solar panels
+        - a local club thanks its sponsors | money
+        - someone asks a town group about a road closure
+        - a book club picks its next title
+        - parents organise a carpool to school | logistics, vehicle
+        - residents report noisy works and ask who to call | logistics
+        - volunteers share the rota for a charity shop | logistics
+        - a club treasurer collects details for new licences | admin, money
+        - a residents' group gathers details for a joint complaint | admin
+        - a volunteer registers for a charity race | admin
+
+  docs:
+    no_indicator_share: 0.35
+    accessory_share: 0.85
+    record_tag: admin
+    base_kinds: [name, email, phone, address, company_id, password, url_password, opaque_token, api_key, private_key, jwt]
+    tag_boost: 4
+    tag_kinds:
+      admin: [address, birth_date, national_id, tax_id, identity_card, passport, driving_licence, iban, payment_card, plate]
+    lengths:
+      - {name: short, lines: [3, 15], weight: 30}
+      - {name: medium, lines: [16, 60], weight: 50}
+      - {name: long, lines: [61, 120], weight: 20}
+    formats:
+      README .md: {name: 5, email: 5, password: 3, url_password: 3, opaque_token: 3, api_key: 3, private_key: 1, phone: 1}
+      ticket: {name: 8, email: 6, phone: 5, address: 4, birth_date: 2, national_id: 2, iban: 2, payment_card: 1, plate: 1, opaque_token: 1, password: 1, identity_card: 1, passport: 1, driving_licence: 1, tax_id: 1}
+      formal email: {name: 8, email: 6, phone: 6, address: 5, iban: 3, birth_date: 2, national_id: 2, company_id: 3, tax_id: 1, identity_card: 1, driving_licence: 1, passport: 1, payment_card: 1}
+      commit message: {name: 8, email: 7, opaque_token: 2, api_key: 2, password: 1, url_password: 1}
+      pull request description: {name: 7, email: 4, opaque_token: 3, api_key: 3, password: 2, url_password: 2, private_key: 1, jwt: 1}
+      meeting notes: {name: 9, email: 3, phone: 3, address: 2, birth_date: 1, password: 2, iban: 1}
+      wiki page: {name: 6, email: 4, phone: 3, password: 3, url_password: 3, opaque_token: 3, api_key: 2, private_key: 2, address: 1}
+      incident report: {name: 7, email: 4, phone: 3, opaque_token: 3, jwt: 2, password: 2, url_password: 2, iban: 1, payment_card: 1, address: 1}
+    record_formats: [ticket, formal email]
+    positions:
+      - title or subject line
+      - first paragraph
+      - a quoted log or error message
+      - a code block or a command
+      - a bullet in a list
+      - {text: a table row, not: [commit message]}
+      - a trailer or a signature
+      - a closing remark
+      - a link or a URL
+    reasons:
+      - {text: "the person who reported, approved or owns the work", fits: [name, email], weight: 5}
+      - {text: the contact to call if something goes wrong, fits: [name, phone, email], key: [phone], not: [commit message]}
+      - {text: quoted from a customer's message, fits: [name, email, phone, address, birth_date, iban, payment_card], not: [README .md, commit message, pull request description, wiki page]}
+      - {text: a real record pasted to reproduce a bug, needs: admin, not: [README .md, formal email, meeting notes]}
+      - {text: left in a command or a sample by mistake, fits: [name, email, password, url_password, opaque_token, api_key, private_key, jwt], key: [password, url_password, opaque_token, api_key, private_key, jwt], role: accessory, not: [formal email, meeting notes]}
+      - {text: setup instructions that include the credentials, fits: [name, email, password, url_password, opaque_token, api_key, private_key], key: [password, url_password, opaque_token, api_key, private_key, jwt], not: [commit message, ticket, formal email, incident report]}
+      - {text: a credential shared so a colleague can get on with the work, fits: [name, email, password, url_password, opaque_token, api_key, jwt], key: [password, url_password, opaque_token, api_key, private_key, jwt], not: [README .md, commit message]}
+      - {text: needed to identify the file being discussed, fits: [name, national_id, tax_id, identity_card, passport, driving_licence, plate, company_id, iban], key: [national_id, tax_id, identity_card, passport, driving_licence, plate, company_id, iban], not: [README .md, commit message, pull request description, wiki page]}
+      - {text: a signature block added by the mail client, fits: [name, email, phone, address, company_id], role: accessory, position: a trailer or a signature, not: [README .md, commit message, pull request description, meeting notes, wiki page, incident report]}
+      - {text: a commit or review trailer, fits: [name, email], key: [email], role: accessory, position: a trailer or a signature, not: [README .md, ticket, formal email, meeting notes, wiki page, incident report]}
+      - {text: mentioned in passing while the text is about something else, role: accessory, weight: 1}
+    record_reasons:
+      - a customer's whole file is quoted to explain the case
+      - the record was copied from the back office to reproduce a problem
+      - a colleague forwards everything needed to take over the case
+    empty_reasons:
+      - the text speaks only of teams, services and systems
+      - placeholders stand where credentials would go
+      - names appear only as libraries, eponyms or code identifiers
+      - {text: a contact or owner field holds a team or a bot, indicator: present}
+      - only ordinary dates, versions and identifiers appear
+    purposes:
+      - fails after an upgrade | tech
+      - has been slow since the last deployment | tech
+      - moves to a new provider
+      - needs a new owner
+      - gets a small feature request | tech
+      - was flagged by an audit
+      - is explained to new hires
+      - was rolled back | tech
+      - gets a cost review
+      - shows wrong figures for one customer | tech
+      - is planned for next quarter
+      - breaks for a single team | tech
+      - needs a temporary workaround | tech
+      - is being retired
+      - was fixed, and the fix is explained | tech
+      - raises a question nobody can answer
+    situations:
+      any:
+        - the invoice PDF generator | tech, admin
+        - the customer portal | tech, admin
+        - the payment retry job | tech, admin
+        - the password reset flow | tech, admin
+        - the document upload service | tech, admin
+        - the customer import tool | tech, admin
+        - the batch of duplicate records | tech, admin
+        - the identity verification step | tech, admin
+        - the contract signature workflow | tech, admin
+        - the test data refresh | tech, admin
+        - the nightly data export | tech
+        - the login page | tech
+        - the outgoing mail relay | tech
+        - the search index | tech
+        - the mobile app release | tech
+        - the staging environment | tech
+        - the reporting dashboard | tech
+        - the data warehouse sync | tech
+        - the SMS notification provider | tech
+        - the address autocomplete | tech
+        - the single sign-on setup | tech
+        - the backup rotation | tech
+        - the CRM integration | tech
+        - the API rate limiter | tech
+        - the feature flag cleanup | tech
+        - the translation files | tech
+        - the load test | tech
+        - the database migration | tech
+        - the CI pipeline | tech
+        - the dependency upgrade | tech
+        - the TLS certificate renewal | tech
+        - the CDN configuration | tech
+        - the fraud rules | tech
+        - the webhook retries | tech
+        - the timezone handling | tech
+        - the report scheduler | tech
+        - the mobile push notifications | tech
+        - the email deliverability | tech
+        - the data deletion requests | business, admin
+        - the refund process | business, admin
+        - the archive of old tickets | business, admin
+        - the cookie banner | business
+        - the onboarding checklist | business
+        - the quarterly access review | business
+        - the on-call rota | business
+        - the accessibility audit | business
+        - the log retention policy | business
+        - the vendor contract renewal | business
+        - the support macro library | business
+        - the customer satisfaction survey | business
+        - the quarterly planning | business
+        - the budget forecast | business
+        - the office move | business
+        - the laptop replacement programme | business
+        - the pricing page | business
+        - the newsletter template | business
+        - the internal wiki cleanup | business
+        - a client's security questionnaire | business
+        - the penetration test findings | business
+        - the disaster recovery drill | business
+
+  tabular:
+    no_indicator_share: 0.35
+    accessory_share: 0.8
+    record_tag: people
+    base_kinds: [name, email, phone]
+    tag_boost: 4
+    tag_kinds:
+      people: [address, birth_date, national_id, tax_id, passport, driving_licence]
+      money: [address, iban, bank_account, payment_card, card_code, tax_id]
+      vehicle: [plate]
+      access: [password, opaque_token]
+    lengths:
+      - {name: short, lines: [3, 15], weight: 30}
+      - {name: medium, lines: [16, 40], weight: 50}
+      - {name: long, lines: [41, 90], weight: 20}
+    formats:
+      .csv: {name: 9, email: 6, phone: 4, address: 4, birth_date: 3, iban: 3, payment_card: 2, bank_account: 2, national_id: 2, plate: 1, password: 1, opaque_token: 1}
+      .tsv: {name: 9, email: 5, phone: 4, address: 4, birth_date: 3, bank_account: 3, national_id: 2, passport: 1, driving_licence: 1, plate: 1, opaque_token: 1}
+      SQL dump (.sql): {name: 9, email: 7, phone: 3, address: 3, birth_date: 3, password: 3, opaque_token: 2, iban: 2, payment_card: 2, card_code: 1, national_id: 2, passport: 1, driving_licence: 1, tax_id: 1, plate: 1}
+      spreadsheet as text: {name: 9, email: 4, phone: 5, address: 4, birth_date: 3, iban: 2, bank_account: 3, national_id: 2, passport: 1, driving_licence: 1, plate: 2, password: 1, tax_id: 1}
+      Markdown table: {name: 9, email: 5, phone: 5, address: 2, birth_date: 1, password: 2, opaque_token: 1}
+      fixed-width export: {name: 8, phone: 2, address: 2, birth_date: 3, bank_account: 3, national_id: 3, iban: 2, plate: 1, tax_id: 1}
+    record_formats: [.csv, .tsv, SQL dump (.sql), spreadsheet as text]
+    positions:
+      - first column
+      - middle column
+      - last column
+      - a free-text comment cell
+      - a title or note row above the table
+      - a footer row
+      - a column with a neutral header
+      - a few rows only, the others empty
+    reasons:
+      - {text: a contact column kept from the source system, fits: [name, phone, email], weight: 5}
+      - {text: the person who entered or approved each row, fits: [name, email]}
+      - {text: a note someone typed in a comment cell, fits: [name, phone, email], position: a free-text comment cell}
+      - {text: the person who produced the export, fits: [name, email], position: a title or note row above the table}
+      - {text: "needed to deliver, visit or invoice", fits: [name, address, phone], key: [address]}
+      - {text: needed to pay or reimburse, fits: [name, address, iban, bank_account, payment_card, card_code, tax_id], key: [iban, bank_account, payment_card, card_code], needs: money}
+      - {text: the file is about these people, key: [address, birth_date, national_id, passport, driving_licence, tax_id], needs: people, role: central}
+      - {text: a vehicle is part of the record, fits: [name, plate, phone], key: [plate], needs: vehicle}
+      - {text: credentials stored next to the data for convenience, fits: [name, email, password, opaque_token], key: [password, opaque_token], needs: access}
+      - {text: a column the source system exports by default, role: accessory, weight: 1}
+    record_reasons:
+      - the export is a list of people with their details
+      - a master file of customers or staff was copied whole
+      - an onboarding sheet gathers each person's details
+    empty_reasons:
+      - figures per team, site or product, with no person
+      - {text: announcing headers hold only statuses or department names, indicator: present}
+      - names appear only as eponyms, products or companies
+      - identifiers are technical, such as order numbers or UUIDs
+    purposes:
+      - exported for a quarterly audit
+      - prepared for a migration to a new tool
+      - sent to an outside accountant
+      - cleaned up before a mail merge
+      - used to debug an import
+      - attached to a ticket
+      - shared with a manager for a meeting
+      - kept as a manual backup
+      - merged from two sources
+      - requested by a regulator
+      - compared with last month
+      - sampled for a test environment
+    situations:
+      payroll:
+        - monthly overtime claims | people, money
+        - pension auto-enrolment list | people, money
+        - expenses to reimburse | money
+        - holiday balances
+        - starters and leavers | people, money
+        - bonus run | money
+        - statutory sick pay | people
+        - cycle-to-work scheme | money
+      retail:
+        - store stock counts
+        - loyalty scheme members | people
+        - supplier delivery slots | vehicle
+        - returned goods | money
+        - staff rota by store
+        - click-and-collect orders | money
+        - price changes
+        - gift card sales | money
+      healthcare:
+        - clinic appointment list | people
+        - bed occupancy
+        - equipment maintenance
+        - vaccination sessions | people
+        - waiting referrals | people
+        - agency staff shifts | money
+        - pharmacy orders
+        - patient transport bookings | people, vehicle
+      education:
+        - exam entries | people
+        - free school meals | people
+        - school trip payments | money
+        - room bookings
+        - after-school clubs | people
+        - staff training records
+        - library loans
+        - governors' meeting attendance
+      housing:
+        - repairs log
+        - rent arrears | people, money
+        - void properties
+        - gas safety checks
+        - tenant satisfaction survey
+        - estate inspections | vehicle
+        - waiting list | people
+        - contractor invoices | money
+      charities:
+        - Gift Aid donors | people, money
+        - volunteer shifts
+        - event sign-ups | people
+        - shop takings
+        - grant applications | money
+        - membership renewals | people, money
+        - food bank parcels
+        - mailing list
+      e-commerce:
+        - abandoned carts
+        - orders to ship | money
+        - product returns | money
+        - marketplace payouts | money
+        - customer reviews
+        - coupon usage
+        - stock alerts
+        - VIP customers | people, money
+      travel:
+        - flight bookings | people, money
+        - hotel reservations | money
+        - passenger manifest | people
+        - group tour list | people
+        - refund requests | money
+        - car hire bookings | people, vehicle, money
+        - loyalty miles
+        - visa support files | people
+      insurance:
+        - open claims | people, money, vehicle
+        - policy renewals | people, money
+        - broker commissions | money
+        - vehicle fleet cover | vehicle
+        - premium arrears | money
+        - travel cover holders | people
+        - fraud review list | people
+        - medical cover members | people, money
+      SaaS:
+        - trial sign-ups
+        - seat licences
+        - churned accounts
+        - overdue invoices | money
+        - API key inventory | access
+        - admin users | access, people
+        - support tickets by account
+        - usage by workspace

@@ -1,0 +1,213 @@
+# Round 1 generation plan: one entry per session (docs/data-pipeline.md#coverage-matrix).
+# 2,380 templates. The 12 cells up to tabular-fr-01 (1,830 templates) were written with a minimum per kind.
+# The 8 cells with `briefs: true` (550 templates, about a quarter holding no entity) follow briefs drawn by
+# `python -m datagen briefs`, which decide each template's situation, kinds, length and placement.
+# A session generates one entry in batches of 20 with prompts/template-generation.md, and
+# `python -m datagen progress` records each batch in templates/progress.yaml.
+round: 1
+cells:
+  # code: 750
+  - cell_id: code-fr-01
+    family: code
+    formats: [.py, .sql, .ipynb, .sh]
+    language: fr
+    fill_locale: fr_FR
+    domains: [healthcare, banking, HR, energy, public administration, insurance]
+    templates: 150
+    pii_free_templates: 38
+    kinds_to_cover: [fr_social_security_number, fr_tax_number, fr_siret, iban, fr_postal_address, birth_date, password, url_password, private_key, opaque_token]
+    focus: Python services, data scripts and notebooks; SQL migrations, seeds and ad hoc queries; shell scripts of operations teams.
+  - cell_id: code-fr-02
+    family: code
+    formats: [.js, .ts, .java, .php, .kt]
+    language: fr
+    fill_locale: fr_FR
+    domains: [e-commerce, logistics, education, real estate, telecom, travel]
+    templates: 150
+    pii_free_templates: 38
+    kinds_to_cover: [payment_card, card_security_code, stripe_secret_key, jwt, fr_identity_card, fr_passport, fr_license_plate, fr_siren, google_api_key, sendgrid_api_key, phone]
+    focus: Web back ends and front ends, Android apps, Spring services; fixtures, mocks and API clients.
+  - cell_id: code-en-01
+    family: code
+    formats: [.py, .sql, .ipynb, .sh]
+    language: en
+    fill_locale: en_US
+    domains: [healthcare, fintech, insurance, government, SaaS, retail]
+    templates: 150
+    pii_free_templates: 38
+    kinds_to_cover: [us_ssn, us_itin, us_passport, us_license_plate, postal_address, bank_account_number, aws_access_key_id, aws_secret_access_key, openai_api_key, anthropic_api_key, huggingface_token]
+    focus: Data pipelines, ML notebooks calling model APIs, Django and FastAPI services, SQL analytics.
+  - cell_id: code-en-02
+    family: code
+    formats: [.js, .ts, .java, .go, .cs, .rb]
+    language: en
+    fill_locale: en_GB
+    domains: [logistics, e-commerce, education, media, travel, energy]
+    templates: 150
+    pii_free_templates: 38
+    kinds_to_cover: [uk_national_insurance_number, uk_driving_licence, uk_passport, uk_license_plate, iban, github_token, npm_token, slack_token, jwt, payment_card]
+    focus: Node and TypeScript services, Go and .NET back ends, Rails apps; tests, seeds and CI helpers.
+  - cell_id: code-mixed-01
+    family: code
+    formats: [.py, .ts, .sql, .java, .ipynb]
+    language: mixed
+    fill_locale: mixed
+    domains: [banking, healthcare, e-commerce, HR, SaaS, logistics]
+    templates: 150
+    pii_free_templates: 38
+    kinds_to_cover: [fr_postal_address, fr_social_security_number, us_ssn, iban, gitlab_token, private_key, opaque_token, password, birth_date, url_password]
+    focus: English code and comments handling French customer data, and the reverse.
+  # config: 450
+  - cell_id: config-fr-01
+    family: config
+    formats: [.env, docker-compose.yml, Kubernetes .yaml, GitHub Actions .yml, .json, .toml, .ini, .properties]
+    language: fr
+    fill_locale: fr_FR
+    domains: [public administration, healthcare, banking, e-commerce, energy, education]
+    templates: 180
+    pii_free_templates: 45
+    kinds_to_cover: [url_password, password, opaque_token, private_key, slack_token, google_api_key, stripe_secret_key, fr_siret, iban, phone]
+    focus: Environment files, deployment manifests and application settings; contacts in comments and labels.
+  - cell_id: config-en-01
+    family: config
+    formats: [.env, Terraform .tfvars, Kubernetes .yaml, docker-compose.yml, .json, .toml, .npmrc, .ini]
+    language: en
+    fill_locale: en_US
+    domains: [fintech, SaaS, healthcare, media, retail, logistics]
+    templates: 180
+    pii_free_templates: 45
+    kinds_to_cover: [aws_access_key_id, aws_secret_access_key, sendgrid_api_key, gitlab_token, npm_token, huggingface_token, anthropic_api_key, openai_api_key, jwt, github_token]
+    focus: Cloud and CI configuration, secrets committed by mistake, registries and tool settings.
+  - cell_id: config-mixed-01
+    family: config
+    formats: [.env, .yaml, .json, .properties]
+    language: mixed
+    fill_locale: mixed
+    domains: [e-commerce, banking, SaaS, logistics]
+    templates: 90
+    pii_free_templates: 23
+    kinds_to_cover: [github_token, url_password, private_key, opaque_token, password, stripe_secret_key, slack_token, google_api_key]
+    focus: English keys with French comments and values, and the reverse.
+  # logs: 450
+  - cell_id: logs-fr-01
+    family: logs
+    formats: [application log, stack trace, test output, access log, CI log, audit log]
+    language: fr
+    fill_locale: fr_FR
+    domains: [banking, insurance, healthcare, public administration, e-commerce, telecom]
+    templates: 180
+    pii_free_templates: 45
+    kinds_to_cover: [fr_social_security_number, fr_passport, fr_license_plate, fr_driving_licence, iban, birth_date, jwt, opaque_token, password, payment_card]
+    focus: Errors quoting customer records, debug lines with tokens, audit trails of who did what.
+  - cell_id: logs-en-01
+    family: logs
+    formats: [application log, stack trace, test output, access log, CI log, audit log]
+    language: en
+    fill_locale: en_US
+    domains: [fintech, SaaS, healthcare, retail, government, travel]
+    templates: 180
+    pii_free_templates: 45
+    kinds_to_cover: [us_ssn, us_driver_license, us_passport, us_license_plate, payment_card, card_security_code, jwt, opaque_token, password, postal_address]
+    focus: Request logs with tokens in headers and query strings, KYC and payment errors, failing tests printing fixtures.
+  - cell_id: logs-mixed-01
+    family: logs
+    formats: [application log, stack trace, CI log]
+    language: mixed
+    fill_locale: mixed
+    domains: [banking, SaaS, e-commerce, logistics]
+    templates: 90
+    pii_free_templates: 23
+    kinds_to_cover: [url_password, private_key, aws_access_key_id, aws_secret_access_key, github_token, stripe_secret_key, jwt, iban, fr_social_security_number, us_itin, uk_driving_licence]
+    focus: English framework messages around French data, CI output leaking secrets.
+  # tabular, first cell
+  - cell_id: tabular-fr-01
+    family: tabular
+    formats: [.csv, .tsv, SQL dump (.sql), spreadsheet as text, Markdown table, fixed-width export]
+    language: fr
+    fill_locale: fr_FR
+    domains: [HR, education, healthcare, real estate, associations, public administration]
+    templates: 180
+    pii_free_templates: 45
+    kinds_to_cover: [fr_social_security_number, fr_tax_number, fr_identity_card, fr_driving_licence, fr_passport, iban, bank_account_number, birth_date, fr_postal_address, fr_siren]
+    focus: Exports with and without headers, columns split or merged, a few rows to a few dozen.
+  # Remaining cells, in generation order. Each template follows a drawn brief (`python -m datagen briefs`).
+  - cell_id: natural-fr-01
+    family: natural
+    formats: [LinkedIn message, "chat message (Slack, Teams, WhatsApp)", SMS, informal email, forum post, social media comment]
+    language: fr
+    fill_locale: fr_FR
+    domains: [recruiting, freelance missions, sales prospecting, networking, personal life, customer support, community]
+    templates: 100
+    pii_free_templates: 25
+    briefs: true
+    focus: What people write to each other, not files. Informal tone, typos, abbreviations, emojis; names, numbers and addresses dropped mid-sentence with no announcing word; signatures or none.
+  - cell_id: docs-fr-01
+    family: docs
+    formats: [README .md, ticket, formal email, commit message, pull request description, meeting notes, wiki page, incident report]
+    language: fr
+    fill_locale: fr_FR
+    domains: [insurance, healthcare, banking, public administration, HR, e-commerce]
+    templates: 120
+    pii_free_templates: 30
+    briefs: true
+    focus: Tickets and emails quoting customers, onboarding docs with credentials, commit trailers; initials and handles of people.
+  - cell_id: docs-mixed-01
+    family: docs
+    formats: [README .md, ticket, commit message, wiki page]
+    language: mixed
+    fill_locale: mixed
+    domains: [SaaS, e-commerce, banking, logistics]
+    templates: 60
+    pii_free_templates: 15
+    briefs: true
+    focus: French tickets quoting English errors, English docs about French customers.
+  - cell_id: natural-mixed-01
+    family: natural
+    formats: [LinkedIn message, "chat message (Slack, Teams)", informal email]
+    language: mixed
+    fill_locale: mixed
+    domains: [recruiting, freelance missions, networking, customer support]
+    templates: 40
+    pii_free_templates: 10
+    briefs: true
+    focus: French messages with English job titles, tools or quotes, and the reverse.
+  - cell_id: docs-en-01
+    family: docs
+    formats: [README .md, ticket, formal email, commit message, pull request description, meeting notes, wiki page, incident report]
+    language: en
+    fill_locale: en_US
+    domains: [SaaS, fintech, healthcare, government, retail, media]
+    templates: 80
+    pii_free_templates: 20
+    briefs: true
+    focus: Incident postmortems, support tickets, PR descriptions, runbooks; people in prose, trailers and signatures.
+  - cell_id: natural-en-01
+    family: natural
+    formats: [LinkedIn message, "chat message (Slack, Teams, WhatsApp)", SMS, informal email, forum post, social media comment]
+    language: en
+    fill_locale: en_GB
+    domains: [recruiting, freelance missions, sales prospecting, networking, personal life, customer support, community]
+    templates: 50
+    pii_free_templates: 13
+    briefs: true
+    focus: What people write to each other, not files. Informal tone, typos, abbreviations, emojis; names, numbers and addresses dropped mid-sentence with no announcing word; signatures or none.
+  - cell_id: tabular-en-01
+    family: tabular
+    formats: [.csv, .tsv, SQL dump (.sql), spreadsheet as text, Markdown table, fixed-width export]
+    language: en
+    fill_locale: en_GB
+    domains: [payroll, retail, healthcare, education, housing, charities]
+    templates: 60
+    pii_free_templates: 15
+    briefs: true
+    focus: Payroll and membership exports, headerless extracts, sort codes and account numbers side by side.
+  - cell_id: tabular-mixed-01
+    family: tabular
+    formats: [.csv, SQL dump (.sql), spreadsheet as text]
+    language: mixed
+    fill_locale: mixed
+    domains: [e-commerce, travel, insurance, SaaS]
+    templates: 40
+    pii_free_templates: 10
+    briefs: true
+    focus: English headers over French and foreign values, international customer lists.

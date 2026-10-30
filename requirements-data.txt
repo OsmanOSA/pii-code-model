@@ -1,0 +1,5 @@
+# Data pipeline: template checker, filler, review page.
+#   python -m pip install -r requirements-data.txt
+Faker==40.44.0
+PyYAML==6.0.3
+tzdata==2026.6

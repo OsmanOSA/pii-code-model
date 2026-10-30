@@ -1,0 +1,824 @@
+# Drawn by `python -m datagen briefs`. Do not edit by hand: delete the file to draw again.
+- slot: 1
+  format: commit message
+  domain: banking
+  situation: the CI pipeline, has been slow since the last deployment
+  kinds:
+  - opaque_token
+  - email
+  full_record: false
+  data_role: accessory
+  reason: left in a command or a sample by mistake
+  position: a bullet in a list
+  indicator: present
+  length: medium
+  lines: &id001
+  - 16
+  - 60
+- slot: 2
+  format: commit message
+  domain: SaaS
+  situation: the cookie banner, was flagged by an audit
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: the person who reported, approved or owns the work
+  position: a closing remark
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 3
+  format: commit message
+  domain: e-commerce
+  situation: the API rate limiter, is explained to new hires
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: the text speaks only of teams, services and systems
+  position: none
+  indicator: present
+  length: short
+  lines: &id002
+  - 3
+  - 15
+- slot: 4
+  format: ticket
+  domain: e-commerce
+  situation: the document upload service, was flagged by an audit
+  kinds:
+  - person_name
+  - payment_card
+  - fr_social_security_number
+  - iban
+  - phone
+  full_record: true
+  data_role: central
+  reason: a colleague forwards everything needed to take over the case
+  position: a code block or a command
+  indicator: present
+  length: long
+  lines: &id003
+  - 61
+  - 120
+- slot: 5
+  format: wiki page
+  domain: logistics
+  situation: the mobile app release, needs a temporary workaround
+  kinds:
+  - opaque_token
+  - postal_address
+  - private_key
+  full_record: false
+  data_role: accessory
+  reason: mentioned in passing while the text is about something else
+  position: a trailer or a signature
+  indicator: absent
+  length: medium
+  lines: *id001
+- slot: 6
+  format: README .md
+  domain: banking
+  situation: the reporting dashboard, is being retired
+  kinds:
+  - password
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: setup instructions that include the credentials
+  position: a quoted log or error message
+  indicator: absent
+  length: medium
+  lines: *id001
+- slot: 7
+  format: commit message
+  domain: SaaS
+  situation: the fraud rules, needs a new owner
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: the text speaks only of teams, services and systems
+  position: none
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 8
+  format: commit message
+  domain: logistics
+  situation: the budget forecast, moves to a new provider
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: the person who reported, approved or owns the work
+  position: title or subject line
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 9
+  format: ticket
+  domain: e-commerce
+  situation: the batch of duplicate records, gets a small feature request
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: only ordinary dates, versions and identifiers appear
+  position: none
+  indicator: present
+  length: long
+  lines: *id003
+- slot: 10
+  format: README .md
+  domain: SaaS
+  situation: the laptop replacement programme, was flagged by an audit
+  kinds:
+  - url_password
+  full_record: false
+  data_role: accessory
+  reason: setup instructions that include the credentials
+  position: a trailer or a signature
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 11
+  format: README .md
+  domain: banking
+  situation: the disaster recovery drill, needs a new owner
+  kinds:
+  - opaque_token
+  - password
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: setup instructions that include the credentials
+  position: title or subject line
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 12
+  format: ticket
+  domain: e-commerce
+  situation: the customer satisfaction survey, is being retired
+  kinds:
+  - person_name
+  - fr_postal_address
+  full_record: false
+  data_role: accessory
+  reason: a signature block added by the mail client
+  position: a trailer or a signature
+  indicator: present
+  length: long
+  lines: *id003
+- slot: 13
+  format: wiki page
+  domain: logistics
+  situation: the timezone handling, fails after an upgrade
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: only ordinary dates, versions and identifiers appear
+  position: none
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 14
+  format: ticket
+  domain: banking
+  situation: the customer import tool, is being retired
+  kinds:
+  - person_name
+  - birth_date
+  - payment_card
+  - fr_postal_address
+  full_record: true
+  data_role: central
+  reason: the record was copied from the back office to reproduce a problem
+  position: a link or a URL
+  indicator: present
+  length: long
+  lines: *id003
+- slot: 15
+  format: ticket
+  domain: banking
+  situation: the office move, raises a question nobody can answer
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a signature block added by the mail client
+  position: a trailer or a signature
+  indicator: present
+  length: long
+  lines: *id003
+- slot: 16
+  format: wiki page
+  domain: logistics
+  situation: the onboarding checklist, moves to a new provider
+  kinds:
+  - email
+  - url_password
+  full_record: false
+  data_role: accessory
+  reason: left in a command or a sample by mistake
+  position: a closing remark
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 17
+  format: wiki page
+  domain: SaaS
+  situation: the quarterly planning, needs a new owner
+  kinds:
+  - person_name
+  - password
+  - opaque_token
+  full_record: false
+  data_role: accessory
+  reason: setup instructions that include the credentials
+  position: first paragraph
+  indicator: absent
+  length: medium
+  lines: *id001
+- slot: 18
+  format: README .md
+  domain: e-commerce
+  situation: the invoice PDF generator, has been slow since the last deployment
+  kinds:
+  - email
+  full_record: false
+  data_role: accessory
+  reason: the person who reported, approved or owns the work
+  position: a closing remark
+  indicator: absent
+  length: medium
+  lines: *id001
+- slot: 19
+  format: ticket
+  domain: SaaS
+  situation: the data deletion requests, needs a new owner
+  kinds:
+  - person_name
+  - payment_card
+  - birth_date
+  - fr_social_security_number
+  - fr_tax_number
+  full_record: true
+  data_role: central
+  reason: the record was copied from the back office to reproduce a problem
+  position: a bullet in a list
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 20
+  format: wiki page
+  domain: SaaS
+  situation: the archive of old tickets, moves to a new provider
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: only ordinary dates, versions and identifiers appear
+  position: none
+  indicator: absent
+  length: medium
+  lines: *id001
+- slot: 21
+  format: wiki page
+  domain: banking
+  situation: the pricing page, is explained to new hires
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: the person who reported, approved or owns the work
+  position: a link or a URL
+  indicator: absent
+  length: long
+  lines: *id003
+- slot: 22
+  format: commit message
+  domain: logistics
+  situation: the on-call rota, raises a question nobody can answer
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a contact or owner field holds a team or a bot
+  position: none
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 23
+  format: ticket
+  domain: e-commerce
+  situation: the load test, gets a small feature request
+  kinds:
+  - person_name
+  - email
+  full_record: false
+  data_role: accessory
+  reason: a signature block added by the mail client
+  position: a trailer or a signature
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 24
+  format: ticket
+  domain: banking
+  situation: the internal wiki cleanup, is planned for next quarter
+  kinds:
+  - fr_postal_address
+  - person_name
+  full_record: false
+  data_role: central
+  reason: quoted from a customer's message
+  position: first paragraph
+  indicator: absent
+  length: medium
+  lines: *id001
+- slot: 25
+  format: wiki page
+  domain: SaaS
+  situation: the webhook retries, was fixed, and the fix is explained
+  kinds:
+  - email
+  full_record: false
+  data_role: accessory
+  reason: mentioned in passing while the text is about something else
+  position: a code block or a command
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 26
+  format: commit message
+  domain: logistics
+  situation: the report scheduler, breaks for a single team
+  kinds:
+  - email
+  - url_password
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: left in a command or a sample by mistake
+  position: a link or a URL
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 27
+  format: commit message
+  domain: e-commerce
+  situation: the nightly data export, shows wrong figures for one customer
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: placeholders stand where credentials would go
+  position: none
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 28
+  format: wiki page
+  domain: SaaS
+  situation: the staging environment, fails after an upgrade
+  kinds:
+  - url_password
+  full_record: false
+  data_role: central
+  reason: a credential shared so a colleague can get on with the work
+  position: a trailer or a signature
+  indicator: absent
+  length: long
+  lines: *id003
+- slot: 29
+  format: ticket
+  domain: SaaS
+  situation: the identity verification step, breaks for a single team
+  kinds:
+  - person_name
+  - phone
+  - fr_driving_licence
+  - fr_passport
+  full_record: true
+  data_role: central
+  reason: the record was copied from the back office to reproduce a problem
+  position: a table row
+  indicator: absent
+  length: medium
+  lines: *id001
+- slot: 30
+  format: commit message
+  domain: e-commerce
+  situation: the SMS notification provider, shows wrong figures for one customer
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: mentioned in passing while the text is about something else
+  position: a code block or a command
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 31
+  format: README .md
+  domain: banking
+  situation: the newsletter template, is being retired
+  kinds:
+  - opaque_token
+  - password
+  full_record: false
+  data_role: accessory
+  reason: setup instructions that include the credentials
+  position: title or subject line
+  indicator: absent
+  length: long
+  lines: *id003
+- slot: 32
+  format: wiki page
+  domain: logistics
+  situation: the penetration test findings, was flagged by an audit
+  kinds:
+  - phone
+  - url_password
+  - password
+  full_record: false
+  data_role: accessory
+  reason: mentioned in passing while the text is about something else
+  position: a table row
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 33
+  format: ticket
+  domain: SaaS
+  situation: the quarterly access review, gets a cost review
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a contact or owner field holds a team or a bot
+  position: none
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 34
+  format: README .md
+  domain: logistics
+  situation: the accessibility audit, is being retired
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: the text speaks only of teams, services and systems
+  position: none
+  indicator: present
+  length: long
+  lines: *id003
+- slot: 35
+  format: README .md
+  domain: banking
+  situation: the identity verification step, gets a small feature request
+  kinds:
+  - huggingface_token
+  full_record: false
+  data_role: accessory
+  reason: setup instructions that include the credentials
+  position: a link or a URL
+  indicator: present
+  length: long
+  lines: *id003
+- slot: 36
+  format: ticket
+  domain: e-commerce
+  situation: the backup rotation, needs a temporary workaround
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: only ordinary dates, versions and identifiers appear
+  position: none
+  indicator: absent
+  length: medium
+  lines: *id001
+- slot: 37
+  format: ticket
+  domain: SaaS
+  situation: the translation files, was fixed, and the fix is explained
+  kinds:
+  - person_name
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: a signature block added by the mail client
+  position: a trailer or a signature
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 38
+  format: README .md
+  domain: logistics
+  situation: the outgoing mail relay, was rolled back
+  kinds:
+  - email
+  full_record: false
+  data_role: accessory
+  reason: the person who reported, approved or owns the work
+  position: a quoted log or error message
+  indicator: absent
+  length: medium
+  lines: *id001
+- slot: 39
+  format: ticket
+  domain: banking
+  situation: the login page, has been slow since the last deployment
+  kinds:
+  - email
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: quoted from a customer's message
+  position: a link or a URL
+  indicator: present
+  length: long
+  lines: *id003
+- slot: 40
+  format: ticket
+  domain: e-commerce
+  situation: the customer portal, has been slow since the last deployment
+  kinds:
+  - person_name
+  - uk_passport
+  - iban
+  - payment_card
+  full_record: true
+  data_role: central
+  reason: a customer's whole file is quoted to explain the case
+  position: a bullet in a list
+  indicator: present
+  length: long
+  lines: *id003
+- slot: 41
+  format: wiki page
+  domain: e-commerce
+  situation: the single sign-on setup, breaks for a single team
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a contact or owner field holds a team or a bot
+  position: none
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 42
+  format: wiki page
+  domain: SaaS
+  situation: the data deletion requests, raises a question nobody can answer
+  kinds:
+  - aws_access_key_id
+  full_record: false
+  data_role: accessory
+  reason: setup instructions that include the credentials
+  position: a trailer or a signature
+  indicator: absent
+  length: medium
+  lines: *id001
+- slot: 43
+  format: ticket
+  domain: banking
+  situation: the TLS certificate renewal, is planned for next quarter
+  kinds:
+  - fr_postal_address
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: quoted from a customer's message
+  position: a trailer or a signature
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 44
+  format: wiki page
+  domain: logistics
+  situation: the test data refresh, needs a new owner
+  kinds:
+  - fr_postal_address
+  - password
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a real record pasted to reproduce a bug
+  position: a closing remark
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 45
+  format: commit message
+  domain: SaaS
+  situation: the support macro library, gets a cost review
+  kinds:
+  - password
+  full_record: false
+  data_role: accessory
+  reason: left in a command or a sample by mistake
+  position: a trailer or a signature
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 46
+  format: commit message
+  domain: e-commerce
+  situation: the document upload service, needs a temporary workaround
+  kinds:
+  - npm_token
+  - email
+  full_record: false
+  data_role: accessory
+  reason: a real record pasted to reproduce a bug
+  position: a trailer or a signature
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 47
+  format: commit message
+  domain: e-commerce
+  situation: the customer portal, was rolled back
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: only ordinary dates, versions and identifiers appear
+  position: none
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 48
+  format: README .md
+  domain: banking
+  situation: the CRM integration, shows wrong figures for one customer
+  kinds:
+  - github_token
+  full_record: false
+  data_role: accessory
+  reason: setup instructions that include the credentials
+  position: title or subject line
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 49
+  format: wiki page
+  domain: logistics
+  situation: the TLS certificate renewal, was fixed, and the fix is explained
+  kinds:
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: the contact to call if something goes wrong
+  position: title or subject line
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 50
+  format: wiki page
+  domain: SaaS
+  situation: the onboarding checklist, was flagged by an audit
+  kinds:
+  - person_name
+  - url_password
+  - private_key
+  full_record: false
+  data_role: central
+  reason: setup instructions that include the credentials
+  position: title or subject line
+  indicator: absent
+  length: medium
+  lines: *id001
+- slot: 51
+  format: ticket
+  domain: logistics
+  situation: the contract signature workflow, moves to a new provider
+  kinds:
+  - person_name
+  - iban
+  - phone
+  - email
+  full_record: true
+  data_role: central
+  reason: a customer's whole file is quoted to explain the case
+  position: a code block or a command
+  indicator: absent
+  length: medium
+  lines: *id001
+- slot: 52
+  format: wiki page
+  domain: banking
+  situation: the feature flag cleanup, moves to a new provider
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: names appear only as libraries, eponyms or code identifiers
+  position: none
+  indicator: present
+  length: medium
+  lines: *id001
+- slot: 53
+  format: ticket
+  domain: banking
+  situation: the password reset flow, raises a question nobody can answer
+  kinds:
+  - person_name
+  - payment_card
+  - fr_postal_address
+  - fr_passport
+  full_record: true
+  data_role: central
+  reason: the record was copied from the back office to reproduce a problem
+  position: a closing remark
+  indicator: absent
+  length: medium
+  lines: *id001
+- slot: 54
+  format: README .md
+  domain: logistics
+  situation: the address autocomplete, was rolled back
+  kinds:
+  - huggingface_token
+  full_record: false
+  data_role: accessory
+  reason: setup instructions that include the credentials
+  position: a closing remark
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 55
+  format: README .md
+  domain: SaaS
+  situation: the password reset flow, was fixed, and the fix is explained
+  kinds:
+  - slack_token
+  - private_key
+  full_record: false
+  data_role: accessory
+  reason: mentioned in passing while the text is about something else
+  position: a quoted log or error message
+  indicator: absent
+  length: medium
+  lines: *id001
+- slot: 56
+  format: README .md
+  domain: e-commerce
+  situation: the newsletter template, was flagged by an audit
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: a contact or owner field holds a team or a bot
+  position: none
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 57
+  format: commit message
+  domain: logistics
+  situation: the quarterly planning, is explained to new hires
+  kinds:
+  - person_name
+  full_record: false
+  data_role: central
+  reason: the person who reported, approved or owns the work
+  position: a code block or a command
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 58
+  format: README .md
+  domain: SaaS
+  situation: the data warehouse sync, moves to a new provider
+  kinds:
+  - phone
+  - email
+  - private_key
+  full_record: false
+  data_role: accessory
+  reason: mentioned in passing while the text is about something else
+  position: a code block or a command
+  indicator: absent
+  length: short
+  lines: *id002
+- slot: 59
+  format: wiki page
+  domain: banking
+  situation: the backup rotation, is planned for next quarter
+  kinds:
+  - person_name
+  - email
+  full_record: false
+  data_role: accessory
+  reason: mentioned in passing while the text is about something else
+  position: a code block or a command
+  indicator: present
+  length: short
+  lines: *id002
+- slot: 60
+  format: commit message
+  domain: e-commerce
+  situation: the laptop replacement programme, is being retired
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: the text speaks only of teams, services and systems
+  position: none
+  indicator: present
+  length: medium
+  lines: *id001

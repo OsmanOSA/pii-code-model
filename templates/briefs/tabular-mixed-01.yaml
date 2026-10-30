@@ -1,0 +1,551 @@
+# Drawn by `python -m datagen briefs`. Do not edit by hand: delete the file to draw again.
+- slot: 1
+  format: spreadsheet as text
+  domain: SaaS
+  situation: support tickets by account, attached to a ticket
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: identifiers are technical, such as order numbers or UUIDs
+  position: none
+  indicator: absent
+  length: medium
+  lines: &id003
+  - 16
+  - 40
+- slot: 2
+  format: spreadsheet as text
+  domain: insurance
+  situation: fraud review list, exported for a quarterly audit
+  kinds:
+  - person_name
+  - fr_tax_number
+  - fr_postal_address
+  - phone
+  full_record: true
+  data_role: central
+  reason: an onboarding sheet gathers each person's details
+  position: a column with a neutral header
+  indicator: present
+  length: short
+  lines: &id001
+  - 3
+  - 15
+- slot: 3
+  format: SQL dump (.sql)
+  domain: insurance
+  situation: vehicle fleet cover, exported for a quarterly audit
+  kinds:
+  - email
+  - person_name
+  full_record: false
+  data_role: central
+  reason: the person who entered or approved each row
+  position: a few rows only, the others empty
+  indicator: absent
+  length: long
+  lines: &id002
+  - 41
+  - 90
+- slot: 4
+  format: spreadsheet as text
+  domain: e-commerce
+  situation: stock alerts, shared with a manager for a meeting
+  kinds:
+  - person_name
+  - phone
+  - email
+  full_record: false
+  data_role: central
+  reason: a contact column kept from the source system
+  position: a few rows only, the others empty
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 5
+  format: .csv
+  domain: travel
+  situation: refund requests, merged from two sources
+  kinds:
+  - iban
+  full_record: false
+  data_role: central
+  reason: needed to pay or reimburse
+  position: middle column
+  indicator: absent
+  length: long
+  lines: *id002
+- slot: 6
+  format: .csv
+  domain: insurance
+  situation: open claims, prepared for a migration to a new tool
+  kinds:
+  - fr_license_plate
+  - payment_card
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: first column
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 7
+  format: .csv
+  domain: e-commerce
+  situation: product returns, sent to an outside accountant
+  kinds:
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: a note someone typed in a comment cell
+  position: a free-text comment cell
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 8
+  format: .csv
+  domain: travel
+  situation: loyalty miles, used to debug an import
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: announcing headers hold only statuses or department names
+  position: none
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 9
+  format: .csv
+  domain: e-commerce
+  situation: coupon usage, attached to a ticket
+  kinds:
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: the person who produced the export
+  position: a title or note row above the table
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 10
+  format: .csv
+  domain: SaaS
+  situation: overdue invoices, sent to an outside accountant
+  kinds:
+  - postal_address
+  - payment_card
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: a title or note row above the table
+  indicator: absent
+  length: short
+  lines: *id001
+- slot: 11
+  format: SQL dump (.sql)
+  domain: travel
+  situation: hotel reservations, prepared for a migration to a new tool
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: names appear only as eponyms, products or companies
+  position: none
+  indicator: present
+  length: long
+  lines: *id002
+- slot: 12
+  format: .csv
+  domain: insurance
+  situation: policy renewals, exported for a quarterly audit
+  kinds:
+  - fr_postal_address
+  full_record: false
+  data_role: accessory
+  reason: needed to deliver, visit or invoice
+  position: first column
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 13
+  format: spreadsheet as text
+  domain: e-commerce
+  situation: VIP customers, attached to a ticket
+  kinds:
+  - person_name
+  - postal_address
+  - birth_date
+  - us_driver_license
+  full_record: true
+  data_role: central
+  reason: a master file of customers or staff was copied whole
+  position: a footer row
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 14
+  format: .csv
+  domain: SaaS
+  situation: churned accounts, cleaned up before a mail merge
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: identifiers are technical, such as order numbers or UUIDs
+  position: none
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 15
+  format: .csv
+  domain: SaaS
+  situation: API key inventory, sampled for a test environment
+  kinds:
+  - opaque_token
+  - phone
+  - password
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: last column
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 16
+  format: SQL dump (.sql)
+  domain: insurance
+  situation: premium arrears, merged from two sources
+  kinds:
+  - email
+  full_record: false
+  data_role: accessory
+  reason: the person who produced the export
+  position: a title or note row above the table
+  indicator: absent
+  length: short
+  lines: *id001
+- slot: 17
+  format: spreadsheet as text
+  domain: e-commerce
+  situation: marketplace payouts, requested by a regulator
+  kinds:
+  - person_name
+  - fr_postal_address
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: a few rows only, the others empty
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 18
+  format: SQL dump (.sql)
+  domain: travel
+  situation: passenger manifest, used to debug an import
+  kinds:
+  - email
+  - us_passport
+  - us_itin
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: a column with a neutral header
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 19
+  format: spreadsheet as text
+  domain: insurance
+  situation: medical cover members, kept as a manual backup
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: announcing headers hold only statuses or department names
+  position: none
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 20
+  format: SQL dump (.sql)
+  domain: travel
+  situation: flight bookings, shared with a manager for a meeting
+  kinds:
+  - email
+  - fr_postal_address
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: a title or note row above the table
+  indicator: absent
+  length: long
+  lines: *id002
+- slot: 21
+  format: SQL dump (.sql)
+  domain: e-commerce
+  situation: orders to ship, compared with last month
+  kinds:
+  - postal_address
+  full_record: false
+  data_role: central
+  reason: needed to deliver, visit or invoice
+  position: a footer row
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 22
+  format: SQL dump (.sql)
+  domain: travel
+  situation: car hire bookings, shared with a manager for a meeting
+  kinds:
+  - person_name
+  - fr_driving_licence
+  - birth_date
+  - fr_social_security_number
+  full_record: true
+  data_role: central
+  reason: an onboarding sheet gathers each person's details
+  position: a free-text comment cell
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 23
+  format: .csv
+  domain: SaaS
+  situation: trial sign-ups, requested by a regulator
+  kinds:
+  - person_name
+  - email
+  full_record: false
+  data_role: accessory
+  reason: the person who produced the export
+  position: a title or note row above the table
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 24
+  format: .csv
+  domain: travel
+  situation: visa support files, shared with a manager for a meeting
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: identifiers are technical, such as order numbers or UUIDs
+  position: none
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 25
+  format: .csv
+  domain: insurance
+  situation: broker commissions, sent to an outside accountant
+  kinds:
+  - bank_account_number
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: a few rows only, the others empty
+  indicator: absent
+  length: short
+  lines: *id001
+- slot: 26
+  format: spreadsheet as text
+  domain: e-commerce
+  situation: abandoned carts, exported for a quarterly audit
+  kinds:
+  - phone
+  full_record: false
+  data_role: accessory
+  reason: a contact column kept from the source system
+  position: a column with a neutral header
+  indicator: present
+  length: long
+  lines: *id002
+- slot: 27
+  format: spreadsheet as text
+  domain: SaaS
+  situation: admin users, compared with last month
+  kinds:
+  - person_name
+  - fr_tax_number
+  - birth_date
+  - fr_social_security_number
+  full_record: true
+  data_role: central
+  reason: a master file of customers or staff was copied whole
+  position: a free-text comment cell
+  indicator: absent
+  length: long
+  lines: *id002
+- slot: 28
+  format: SQL dump (.sql)
+  domain: SaaS
+  situation: seat licences, sampled for a test environment
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: identifiers are technical, such as order numbers or UUIDs
+  position: none
+  indicator: absent
+  length: short
+  lines: *id001
+- slot: 29
+  format: SQL dump (.sql)
+  domain: travel
+  situation: group tour list, cleaned up before a mail merge
+  kinds:
+  - fr_social_security_number
+  - fr_postal_address
+  - birth_date
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: a title or note row above the table
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 30
+  format: spreadsheet as text
+  domain: e-commerce
+  situation: customer reviews, attached to a ticket
+  kinds:
+  - person_name
+  - email
+  full_record: false
+  data_role: accessory
+  reason: a contact column kept from the source system
+  position: a free-text comment cell
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 31
+  format: SQL dump (.sql)
+  domain: SaaS
+  situation: usage by workspace, kept as a manual backup
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: names appear only as eponyms, products or companies
+  position: none
+  indicator: absent
+  length: medium
+  lines: *id003
+- slot: 32
+  format: SQL dump (.sql)
+  domain: insurance
+  situation: travel cover holders, compared with last month
+  kinds:
+  - fr_tax_number
+  full_record: false
+  data_role: accessory
+  reason: a column the source system exports by default
+  position: first column
+  indicator: present
+  length: short
+  lines: *id001
+- slot: 33
+  format: spreadsheet as text
+  domain: insurance
+  situation: vehicle fleet cover, merged from two sources
+  kinds:
+  - phone
+  - fr_license_plate
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: a vehicle is part of the record
+  position: a title or note row above the table
+  indicator: present
+  length: long
+  lines: *id002
+- slot: 34
+  format: SQL dump (.sql)
+  domain: e-commerce
+  situation: marketplace payouts, used to debug an import
+  kinds:
+  - iban
+  - person_name
+  full_record: false
+  data_role: accessory
+  reason: needed to pay or reimburse
+  position: middle column
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 35
+  format: SQL dump (.sql)
+  domain: travel
+  situation: passenger manifest, prepared for a migration to a new tool
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: figures per team, site or product, with no person
+  position: none
+  indicator: present
+  length: long
+  lines: *id002
+- slot: 36
+  format: .csv
+  domain: travel
+  situation: hotel reservations, attached to a ticket
+  kinds:
+  - iban
+  full_record: false
+  data_role: accessory
+  reason: needed to pay or reimburse
+  position: a column with a neutral header
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 37
+  format: .csv
+  domain: e-commerce
+  situation: customer reviews, shared with a manager for a meeting
+  kinds: []
+  full_record: false
+  data_role: none
+  reason: announcing headers hold only statuses or department names
+  position: none
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 38
+  format: SQL dump (.sql)
+  domain: SaaS
+  situation: usage by workspace, used to debug an import
+  kinds:
+  - email
+  - person_name
+  full_record: false
+  data_role: central
+  reason: the person who produced the export
+  position: a title or note row above the table
+  indicator: present
+  length: medium
+  lines: *id003
+- slot: 39
+  format: SQL dump (.sql)
+  domain: insurance
+  situation: medical cover members, merged from two sources
+  kinds:
+  - fr_passport
+  full_record: false
+  data_role: central
+  reason: the file is about these people
+  position: last column
+  indicator: present
+  length: long
+  lines: *id002
+- slot: 40
+  format: .csv
+  domain: e-commerce
+  situation: VIP customers, requested by a regulator
+  kinds:
+  - person_name
+  - iban
+  - us_ssn
+  - postal_address
+  full_record: true
+  data_role: central
+  reason: the export is a list of people with their details
+  position: a footer row
+  indicator: present
+  length: medium
+  lines: *id003

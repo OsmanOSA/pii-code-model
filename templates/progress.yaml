@@ -1,0 +1,327 @@
+# Generation progress per cell, rewritten by `python -m datagen progress`. Do not edit by hand.
+updated: '2026-10-30'
+prompt: 5 (sha 39fd75cd)
+cells:
+  code-fr-01:
+    target: 150
+    generated: 150
+    validated: 150
+    pii_free_target: 38
+    pii_free: 38
+    status: done
+    next_batch: batch-009.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: d202d3ccf9cd}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: 0b5dccfc8c17}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: 2d6292e23944}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: c6ef60478f59}
+      batch-005.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: e31af1db3760}
+      batch-006.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: d47c32a479fc}
+      batch-007.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: cc797f40f3b0}
+      batch-008.tpl: {templates: 10, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: 91e2e7b51caf}
+  code-fr-02:
+    target: 150
+    generated: 150
+    validated: 150
+    pii_free_target: 38
+    pii_free: 38
+    status: done
+    next_batch: batch-009.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: d7fdaf3a0aba}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: 34ac266f728a}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: caf1b1ad8ea6}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: 416d3ba3cd60}
+      batch-005.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: fd5123b51c3c}
+      batch-006.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: 0b22726155ce}
+      batch-007.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: 4d6cbd3d3ecd}
+      batch-008.tpl: {templates: 10, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: 1bfe706b06e6}
+  code-en-01:
+    target: 150
+    generated: 150
+    validated: 150
+    pii_free_target: 38
+    pii_free: 38
+    status: done
+    next_batch: batch-009.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: dd63ea3470b5}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: 90bfaba60fc1}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: fd3876e980da}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: 6a8175367271}
+      batch-005.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: 0f0b7cb93087}
+      batch-006.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: 22f1615fefe1}
+      batch-007.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: cbe2d8561f7f}
+      batch-008.tpl: {templates: 10, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-29', sha256: eb0a01ee2bdf}
+  code-en-02:
+    target: 150
+    generated: 150
+    validated: 150
+    pii_free_target: 38
+    pii_free: 38
+    status: done
+    next_batch: batch-009.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 8d9095595494}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 04b5ca9fea96}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 234bf06d4d71}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 3e1594394e9d}
+      batch-005.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 842bb1d89fc6}
+      batch-006.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 3c90c5bc3f72}
+      batch-007.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 199affed9f9d}
+      batch-008.tpl: {templates: 10, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 0924f712adc9}
+  code-mixed-01:
+    target: 150
+    generated: 150
+    validated: 150
+    pii_free_target: 38
+    pii_free: 38
+    status: done
+    next_batch: batch-009.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 81b032bb65d7}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 050a7fe810f3}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 982160fadaec}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 8f7f2de417d0}
+      batch-005.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 44e29fe52af0}
+      batch-006.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: d59b2c9821e3}
+      batch-007.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 786e114fd12b}
+      batch-008.tpl: {templates: 10, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 25d89b13d215}
+  config-fr-01:
+    target: 180
+    generated: 180
+    validated: 180
+    pii_free_target: 45
+    pii_free: 45
+    status: done
+    next_batch: batch-010.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: a4ed9a04f746}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: f6de0095b6f8}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: f6f31305082e}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: e1d7a2c0dd6b}
+      batch-005.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: c8a051f7ca35}
+      batch-006.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: b5c8f352e8c4}
+      batch-007.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 44b5de9421f9}
+      batch-008.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 32e5971a608b}
+      batch-009.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 3a8fdbd522ec}
+  config-en-01:
+    target: 180
+    generated: 180
+    validated: 180
+    pii_free_target: 45
+    pii_free: 45
+    status: done
+    next_batch: batch-010.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 78e7523eb556}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 58987b71e6aa}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: a7b85ceff112}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: c8d5de2843bf}
+      batch-005.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 45fa283f1aa8}
+      batch-006.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: c1924d3e3700}
+      batch-007.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 8f523627533c}
+      batch-008.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 5f38daeb9005}
+      batch-009.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 91f76b2afc2f}
+  config-mixed-01:
+    target: 90
+    generated: 90
+    validated: 90
+    pii_free_target: 23
+    pii_free: 23
+    status: done
+    next_batch: batch-006.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 7a3899ca05f1}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: def9883ef879}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: e512ad94547b}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 1dfb37f06d3b}
+      batch-005.tpl: {templates: 10, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: ff99fa6b7ba1}
+  logs-fr-01:
+    target: 180
+    generated: 180
+    validated: 180
+    pii_free_target: 45
+    pii_free: 45
+    status: done
+    next_batch: batch-010.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: efd134d82dfb}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: bf5ff4f92fd5}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 1cbaf929e95d}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 74c25b271b82}
+      batch-005.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 1446a2500bf5}
+      batch-006.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 5e124bbafed9}
+      batch-007.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 2769eb7a87cb}
+      batch-008.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 333c39e21de1}
+      batch-009.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 8984e5d6bec5}
+  logs-en-01:
+    target: 180
+    generated: 180
+    validated: 180
+    pii_free_target: 45
+    pii_free: 45
+    status: done
+    next_batch: batch-010.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 6bc7d1368097}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 5e98878e2dac}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 55dcd56afb05}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: a8226c81ceda}
+      batch-005.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 2da37a8a26b1}
+      batch-006.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 4a10b26caa45}
+      batch-007.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: cfb7a356d678}
+      batch-008.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: c004b050b3e5}
+      batch-009.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 6ed4c43461a7}
+  logs-mixed-01:
+    target: 90
+    generated: 90
+    validated: 90
+    pii_free_target: 23
+    pii_free: 23
+    status: done
+    next_batch: batch-006.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 6e4b30ad0b5f}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 8442a2bbe5d9}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 370a222a6b20}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 5c5780ff0472}
+      batch-005.tpl: {templates: 10, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 6a07c3acad9c}
+  tabular-fr-01:
+    target: 180
+    generated: 180
+    validated: 180
+    pii_free_target: 45
+    pii_free: 45
+    status: done
+    next_batch: batch-010.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: ff55e1bbf4d5}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 0d41a1488537}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: ca08a9ca0cca}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 039bfa9215be}
+      batch-005.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 7db64e722ce8}
+      batch-006.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 401c3c9e690f}
+      batch-007.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 4574577b61a2}
+      batch-008.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 4b7da9af8846}
+      batch-009.tpl: {templates: 20, failed: '', prompt: 4 (sha b2bd8782), recorded: '2026-10-30', sha256: 011787510127}
+  natural-fr-01:
+    target: 100
+    generated: 100
+    validated: 100
+    pii_free_target: 25
+    pii_free: 25
+    status: done
+    next_batch: batch-006.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 7777cd1946ff}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: a9de16263a16}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 92d868e20e15}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: dcd763262d1a}
+      batch-005.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 5cfe2631bca7}
+  docs-fr-01:
+    target: 120
+    generated: 120
+    validated: 120
+    pii_free_target: 30
+    pii_free: 30
+    status: done
+    next_batch: batch-007.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 89c72d16a58e}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 001e6fff1219}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: e46037655a69}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: bc3bcfa4f317}
+      batch-005.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 39a53fd5711f}
+      batch-006.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: a99533557aba}
+  docs-mixed-01:
+    target: 60
+    generated: 60
+    validated: 60
+    pii_free_target: 15
+    pii_free: 15
+    status: done
+    next_batch: batch-004.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 849a41d13db8}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: c2e7d0b89f51}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 3c38aaea33e3}
+  natural-mixed-01:
+    target: 40
+    generated: 40
+    validated: 40
+    pii_free_target: 10
+    pii_free: 10
+    status: done
+    next_batch: batch-003.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: e1beddbf4d88}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 763b9e8232b8}
+  docs-en-01:
+    target: 80
+    generated: 80
+    validated: 80
+    pii_free_target: 20
+    pii_free: 20
+    status: done
+    next_batch: batch-005.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: fcf0344ad198}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 33f1b7fb4164}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: e67dd91f0ab4}
+      batch-004.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 982311a55256}
+  natural-en-01:
+    target: 50
+    generated: 50
+    validated: 50
+    pii_free_target: 13
+    pii_free: 13
+    status: done
+    next_batch: batch-004.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 64e9a5d108c1}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 5f9793c35cb5}
+      batch-003.tpl: {templates: 10, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 16eb6eac2570}
+  tabular-en-01:
+    target: 60
+    generated: 60
+    validated: 60
+    pii_free_target: 15
+    pii_free: 15
+    status: done
+    next_batch: batch-004.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 90760d9481f3}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 381bc594cb10}
+      batch-003.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: a46af7539606}
+  tabular-mixed-01:
+    target: 40
+    generated: 40
+    validated: 40
+    pii_free_target: 10
+    pii_free: 10
+    status: done
+    next_batch: batch-003.tpl
+    near_duplicates: ''
+    batches:
+      batch-001.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: 2b979c7c1259}
+      batch-002.tpl: {templates: 20, failed: '', prompt: 5 (sha 39fd75cd), recorded: '2026-10-30', sha256: cc3b5d1b3cd8}
